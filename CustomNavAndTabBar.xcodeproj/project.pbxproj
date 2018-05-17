@@ -155,6 +155,7 @@
 		A024763120A446A300AFCC36 /* UITextField+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A024762B20A446A300AFCC36 /* UITextField+Category.m */; };
 		A024763220A446A300AFCC36 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A024762D20A446A300AFCC36 /* UIView+Extension.m */; };
 		A024763320A446A300AFCC36 /* UIColor+HexRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = A024762E20A446A300AFCC36 /* UIColor+HexRGB.m */; };
+		A093064F20AD521D00820F51 /* DeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A093064D20AD521D00820F51 /* DeviceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,6 +407,8 @@
 		A024762C20A446A300AFCC36 /* UIButton+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
 		A024762D20A446A300AFCC36 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		A024762E20A446A300AFCC36 /* UIColor+HexRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexRGB.m"; sourceTree = "<group>"; };
+		A093064D20AD521D00820F51 /* DeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceManager.m; sourceTree = "<group>"; };
+		A093064E20AD521D00820F51 /* DeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1025,6 +1028,8 @@
 		A024762420A446A300AFCC36 /* 类别 */ = {
 			isa = PBXGroup;
 			children = (
+				A093064E20AD521D00820F51 /* DeviceManager.h */,
+				A093064D20AD521D00820F51 /* DeviceManager.m */,
 				A024762520A446A300AFCC36 /* NSString+Category.h */,
 				A024762620A446A300AFCC36 /* UIView+Extension.h */,
 				A024762720A446A300AFCC36 /* UIButton+Category.m */,
@@ -1271,6 +1276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17C1182C202C1D7400C4629B /* MJRefreshComponent.m in Sources */,
+				A093064F20AD521D00820F51 /* DeviceManager.m in Sources */,
 				17C11837202C1D7400C4629B /* MJRefreshStateHeader.m in Sources */,
 				8A4525F81F5D1E5A004EB874 /* AESCipher.m in Sources */,
 				17C1183B202C1D7400C4629B /* UIScrollView+MJExtension.m in Sources */,
