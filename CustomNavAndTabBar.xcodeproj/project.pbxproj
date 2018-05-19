@@ -17,6 +17,7 @@
 		177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */; };
 		177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* YTInfoView.m */; };
 		1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782A1A6206A19EA0013FAED /* YT_PagingView.m */; };
+		179BCD3220AFC4B50031742D /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BCD3120AFC4B50031742D /* DXPopover.m */; };
 		17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */; };
 		17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C117FE202C1D7300C4629B /* MJRefreshAutoFooter.m */; };
 		17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C11800202C1D7300C4629B /* MJRefreshBackFooter.m */; };
@@ -196,6 +197,8 @@
 		177B9B82201EF0C80095B301 /* YTInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTInfoView.h; sourceTree = "<group>"; };
 		1782A1A5206A19EA0013FAED /* YT_PagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_PagingView.h; sourceTree = "<group>"; };
 		1782A1A6206A19EA0013FAED /* YT_PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_PagingView.m; sourceTree = "<group>"; };
+		179BCD3020AFC4B50031742D /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
+		179BCD3120AFC4B50031742D /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
 		17BFB6E3203EA5B000FD395C /* YT_CenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_CenterButton.h; sourceTree = "<group>"; };
 		17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_CenterButton.m; sourceTree = "<group>"; };
 		17C117FD202C1D7300C4629B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -516,6 +519,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		179BCD2F20AFC4B50031742D /* DXPopover */ = {
+			isa = PBXGroup;
+			children = (
+				179BCD3020AFC4B50031742D /* DXPopover.h */,
+				179BCD3120AFC4B50031742D /* DXPopover.m */,
+			);
+			path = DXPopover;
+			sourceTree = "<group>";
+		};
 		17BFB6E2203EA58500FD395C /* 图文上下居中button */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +540,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				179BCD2F20AFC4B50031742D /* DXPopover */,
 				A024762420A446A300AFCC36 /* 类别 */,
 				A02470BF20A1D97500AFCC36 /* 网络工具 */,
 				17ED62C9207F4C740051B25F /* 网络状态监听 */,
@@ -1331,6 +1344,7 @@
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				A024762F20A446A300AFCC36 /* UIButton+Category.m in Sources */,
 				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
+				179BCD3220AFC4B50031742D /* DXPopover.m in Sources */,
 				17C11830202C1D7400C4629B /* MJRefreshAutoNormalFooter.m in Sources */,
 				8A81E9381F593F4F000A3C8E /* GeRenMessageViewController.m in Sources */,
 				8A4525E21F5CE541004EB874 /* LoginViewController.m in Sources */,
