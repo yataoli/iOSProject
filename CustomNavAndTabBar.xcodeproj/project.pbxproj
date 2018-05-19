@@ -18,6 +18,7 @@
 		177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* YTInfoView.m */; };
 		1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782A1A6206A19EA0013FAED /* YT_PagingView.m */; };
 		179BCD3220AFC4B50031742D /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BCD3120AFC4B50031742D /* DXPopover.m */; };
+		179BCD7C20B001380031742D /* YT_GCD_Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BCD7B20B001380031742D /* YT_GCD_Timer.m */; };
 		17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */; };
 		17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C117FE202C1D7300C4629B /* MJRefreshAutoFooter.m */; };
 		17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C11800202C1D7300C4629B /* MJRefreshBackFooter.m */; };
@@ -199,6 +200,8 @@
 		1782A1A6206A19EA0013FAED /* YT_PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_PagingView.m; sourceTree = "<group>"; };
 		179BCD3020AFC4B50031742D /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
 		179BCD3120AFC4B50031742D /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
+		179BCD7A20B001380031742D /* YT_GCD_Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_GCD_Timer.h; sourceTree = "<group>"; };
+		179BCD7B20B001380031742D /* YT_GCD_Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_GCD_Timer.m; sourceTree = "<group>"; };
 		17BFB6E3203EA5B000FD395C /* YT_CenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_CenterButton.h; sourceTree = "<group>"; };
 		17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_CenterButton.m; sourceTree = "<group>"; };
 		17C117FD202C1D7300C4629B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -528,6 +531,15 @@
 			path = DXPopover;
 			sourceTree = "<group>";
 		};
+		179BCD7920B001380031742D /* GCD定时器 */ = {
+			isa = PBXGroup;
+			children = (
+				179BCD7A20B001380031742D /* YT_GCD_Timer.h */,
+				179BCD7B20B001380031742D /* YT_GCD_Timer.m */,
+			);
+			path = "GCD定时器";
+			sourceTree = "<group>";
+		};
 		17BFB6E2203EA58500FD395C /* 图文上下居中button */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +552,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				179BCD7920B001380031742D /* GCD定时器 */,
 				179BCD2F20AFC4B50031742D /* DXPopover */,
 				A024762420A446A300AFCC36 /* 类别 */,
 				A02470BF20A1D97500AFCC36 /* 网络工具 */,
@@ -1355,6 +1368,7 @@
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
 				17F76D772064EFB50021722C /* YT_H5ViewController.m in Sources */,
 				17C1182E202C1D7400C4629B /* MJRefreshHeader.m in Sources */,
+				179BCD7C20B001380031742D /* YT_GCD_Timer.m in Sources */,
 				8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */,
 				17C11832202C1D7400C4629B /* MJRefreshBackGifFooter.m in Sources */,
 				A02470D520A1D97500AFCC36 /* AFNetworkReachabilityManager.m in Sources */,
