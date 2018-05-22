@@ -8,66 +8,64 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DeviceManager : NSObject
-
-+ (instancetype)shareDeviceManager;
+@interface YT_Device : NSObject
 
 /**
  *获取设备型号
  */
-- (NSString*)getDeviceVersion;
++ (NSString*)getDeviceVersion;
 /**
  *获取系统版本号
  */
-- (NSString *)getSystemVersion;
++ (NSString *)getSystemVersion;
 
 /**
  *获取设备电池容量，单位 mA 毫安
  */
-- (NSInteger)getBatteryCapacity;
++ (NSInteger)getBatteryCapacity;
 /**
  *获取设备IP地址
  */
-- (NSString *)getDeviceIPAddresses;
++ (NSString *)getDeviceIPAddresses;
 /**
  *获取设备名字
  */
-- (NSString *)getDeviceName;
++ (NSString *)getDeviceName;
 /**
  获取磁盘总空间
  */
-- (double)getTotalDiskSpace;
++ (double)getTotalDiskSpace;
 /**
  获取磁盘已使用空间
  */
-- (double)getUsedDiskSpace;
++ (double)getUsedDiskSpace;
 /**
  获取磁盘未使用的空间
  */
-- (double)getFreeDiskSpace;
++ (double)getFreeDiskSpace;
 /**
  获取总内存空间
  */
-- (double)getTotalMemory;
++ (double)getTotalMemory;
 /**
  *获取空闲的内存空间
  */
-- (double)getFreeMemory;
++ (double)getFreeMemory;
 /**
  *获取正在使用的内存空间
  */
-- (double)getUsedMemory;
++ (double)getUsedMemory;
 /**
  * 获取APP name
  */
-- (NSString *)getAppName;
++ (NSString *)getAppName;
 /**
  * 获取APP 版本号
  */
-- (NSString *)getAppVersion;
++ (NSString *)getAppVersion;
 /**
  * 获取APP 的icon图标name
  */
-- (NSString *)getAppIconName;
++ (NSString *)getAppIconName;
 
 @end

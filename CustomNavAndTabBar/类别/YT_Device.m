@@ -6,7 +6,7 @@
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
-#import "DeviceManager.h"
+#import "YT_Device.h"
 #import <sys/utsname.h>
 #import <UIKit/UIKit.h>
 
@@ -19,19 +19,10 @@
 #include <mach/mach.h> // 获取CPU信息所需要引入的头文件
 
 
-@implementation DeviceManager
-+ (instancetype)shareDeviceManager{
-    static DeviceManager *device = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        device = [[DeviceManager alloc] init];
-    });
-    return device;
-}
-
+@implementation YT_Device
 
 //获取设备型号
-- (NSString*)getDeviceVersion{
++ (NSString*)getDeviceVersion{
     
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -98,14 +89,14 @@
 /**
  *获取系统版本号
  */
-- (NSString *)getSystemVersion{
++ (NSString *)getSystemVersion{
     return [UIDevice currentDevice].systemVersion;
 }
 /**
  *获取设备电池容量，单位 mA 毫安
  */
-- (NSInteger)getBatteryCapacity {
-    NSString *deviceVersion = [DeviceManager shareDeviceManager].getDeviceVersion;
++ (NSInteger)getBatteryCapacity {
+    NSString *deviceVersion = [self getDeviceVersion];
    
     if ([deviceVersion isEqualToString:@"iPhone 2G"]){
         return 1400;
@@ -186,7 +177,7 @@
 /**
  *获取设备IP地址
  */
-- (NSString *)getDeviceIPAddresses{
++ (NSString *)getDeviceIPAddresses{
     
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     
@@ -243,13 +234,13 @@
 /**
  *获取设备名字
  */
-- (NSString *)getDeviceName{
++ (NSString *)getDeviceName{
     return [UIDevice currentDevice].name;
 }
 /**
  *获取磁盘总空间 
  */
-- (double)getTotalDiskSpace{
++ (double)getTotalDiskSpace{
     NSError *error = nil;
     NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
     if (error) return -1.0;
@@ -261,7 +252,7 @@
 /**
  获取磁盘已使用空间
  */
-- (double)getUsedDiskSpace{
++ (double)getUsedDiskSpace{
     double totalDisk = [self getTotalDiskSpace];
     double freeDisk = [self getFreeDiskSpace];
     if (totalDisk < 0.0 || freeDisk < 0.0) return -1.0;
@@ -270,7 +261,7 @@
         
     return usedDisk;
 }
-- (double)getFreeDiskSpace {
++ (double)getFreeDiskSpace {
     NSError *error = nil;
     NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
     if (error) return -1.0;
@@ -281,7 +272,7 @@
 /**
  获取总内存空间
  */
-- (double)getTotalMemory{
++ (double)getTotalMemory{
     int64_t totalMemory = [[NSProcessInfo processInfo] physicalMemory];
     if (totalMemory < -1) totalMemory = -1.0;
     return totalMemory/1024/1024/1024.0;
@@ -289,7 +280,7 @@
 /**
  *获取空闲的内存空间
  */
-- (double)getFreeMemory{
++ (double)getFreeMemory{
     mach_port_t host_port = mach_host_self();
     mach_msg_type_number_t host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);
     vm_size_t page_size;
@@ -305,7 +296,7 @@
 /**
  *获取正在使用的内存空间
  */
-- (double)getUsedMemory{
++ (double)getUsedMemory{
     mach_port_t host_port = mach_host_self();
     mach_msg_type_number_t host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);
     vm_size_t page_size;
@@ -319,19 +310,19 @@
     return page_size * (vm_stat.active_count + vm_stat.inactive_count + vm_stat.wire_count) / 1024/1024/1024.0;
 }
 #pragma mark - 获取APP name
-- (NSString *)getAppName{
++ (NSString *)getAppName{
     NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
     NSString *currentVersion = [infoDic objectForKey:@"CFBundleDisplayName"];
     return currentVersion;
 }
 #pragma mark - 获取APP 版本号
-- (NSString *)getAppVersion{
++ (NSString *)getAppVersion{
     NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
     NSString *currentVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
     return currentVersion;
 }
 #pragma mark - 获取APP 的icon图标name
-- (NSString *)getAppIconName{
++ (NSString *)getAppIconName{
     NSDictionary *infoPlist = [[NSBundle mainBundle] infoDictionary];
     NSString *icon = [[infoPlist valueForKeyPath:@"CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles"] lastObject];
     return icon;
