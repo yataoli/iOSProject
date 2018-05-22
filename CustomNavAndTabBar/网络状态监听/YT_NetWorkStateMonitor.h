@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Reachability.h"
-#import "YTAlertViewManager.h"
 @protocol YTNetWorkStateMonitorDelegate <NSObject>
 
 @optional
