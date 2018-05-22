@@ -66,6 +66,15 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     //    NSLog(@"%@",NSHomeDirectory());
     _selectedRow = indexPath.row;
+    if (indexPath.row == 0) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"Kaiti" forKey:@"字体"];
+    }else if (indexPath.row == 1){
+        
+        [[NSUserDefaults standardUserDefaults] setValue:@"Fangsong" forKey:@"字体"];
+    }else if (indexPath.row == 2){
+        [[NSUserDefaults standardUserDefaults] setValue:@"Zapfino" forKey:@"字体"];
+    }
+    
     
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

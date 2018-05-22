@@ -19,6 +19,9 @@
 		1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782A1A6206A19EA0013FAED /* YT_PagingView.m */; };
 		179BCD3220AFC4B50031742D /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BCD3120AFC4B50031742D /* DXPopover.m */; };
 		179BCD7C20B001380031742D /* YT_GCD_Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BCD7B20B001380031742D /* YT_GCD_Timer.m */; };
+		179BCD8120B00A9D0031742D /* Fangsong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD7E20B00A9D0031742D /* Fangsong.ttf */; };
+		179BCD8220B00A9D0031742D /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD7F20B00A9D0031742D /* Kaiti.ttf */; };
+		179BCD8320B00A9D0031742D /* Zapfino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD8020B00A9D0031742D /* Zapfino.ttf */; };
 		17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */; };
 		17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C117FE202C1D7300C4629B /* MJRefreshAutoFooter.m */; };
 		17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C11800202C1D7300C4629B /* MJRefreshBackFooter.m */; };
@@ -202,6 +205,9 @@
 		179BCD3120AFC4B50031742D /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
 		179BCD7A20B001380031742D /* YT_GCD_Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_GCD_Timer.h; sourceTree = "<group>"; };
 		179BCD7B20B001380031742D /* YT_GCD_Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_GCD_Timer.m; sourceTree = "<group>"; };
+		179BCD7E20B00A9D0031742D /* Fangsong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fangsong.ttf; sourceTree = "<group>"; };
+		179BCD7F20B00A9D0031742D /* Kaiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kaiti.ttf; sourceTree = "<group>"; };
+		179BCD8020B00A9D0031742D /* Zapfino.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zapfino.ttf; sourceTree = "<group>"; };
 		17BFB6E3203EA5B000FD395C /* YT_CenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_CenterButton.h; sourceTree = "<group>"; };
 		17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_CenterButton.m; sourceTree = "<group>"; };
 		17C117FD202C1D7300C4629B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -540,6 +546,16 @@
 			path = "GCD定时器";
 			sourceTree = "<group>";
 		};
+		179BCD7D20B00A9D0031742D /* 字体库 */ = {
+			isa = PBXGroup;
+			children = (
+				179BCD7E20B00A9D0031742D /* Fangsong.ttf */,
+				179BCD7F20B00A9D0031742D /* Kaiti.ttf */,
+				179BCD8020B00A9D0031742D /* Zapfino.ttf */,
+			);
+			path = "字体库";
+			sourceTree = "<group>";
+		};
 		17BFB6E2203EA58500FD395C /* 图文上下居中button */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +568,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				179BCD7D20B00A9D0031742D /* 字体库 */,
 				179BCD7920B001380031742D /* GCD定时器 */,
 				179BCD2F20AFC4B50031742D /* DXPopover */,
 				A024762420A446A300AFCC36 /* 类别 */,
@@ -1220,7 +1237,9 @@
 				17C118B9202C235400C4629B /* dropdown_anim__00056@2x.png in Resources */,
 				17C118AE202C235400C4629B /* dropdown_anim__00046@2x.png in Resources */,
 				17C11896202C235400C4629B /* dropdown_anim__00024@2x.png in Resources */,
+				179BCD8320B00A9D0031742D /* Zapfino.ttf in Resources */,
 				17C118B4202C235400C4629B /* dropdown_anim__00051@2x.png in Resources */,
+				179BCD8220B00A9D0031742D /* Kaiti.ttf in Resources */,
 				8AA3B7341F384D2C001E70A7 /* 1110.bundle in Resources */,
 				17C118B5202C235400C4629B /* dropdown_anim__00052@2x.png in Resources */,
 				17C118BB202C235400C4629B /* dropdown_anim__00058@2x.png in Resources */,
@@ -1243,6 +1262,7 @@
 				17C11897202C235400C4629B /* dropdown_anim__00025@2x.png in Resources */,
 				17C1188F202C235400C4629B /* dropdown_anim__00018@2x.png in Resources */,
 				17C1188E202C235400C4629B /* dropdown_anim__00017@2x.png in Resources */,
+				179BCD8120B00A9D0031742D /* Fangsong.ttf in Resources */,
 				177B9B76201EEFED0095B301 /* success.png in Resources */,
 				17C1188B202C235400C4629B /* dropdown_anim__00014@2x.png in Resources */,
 				17C11891202C235400C4629B /* dropdown_anim__0001@2x.png in Resources */,

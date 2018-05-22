@@ -21,6 +21,8 @@
 
 #define passwordKey @"?-oRb7wKsY^@>&sW"
 
+#define FontName [[NSUserDefaults standardUserDefaults] objectForKey:@"字体"]
+
 #define Guide_imagesArray @[@"hahaha",@"http://p71yuflyr.bkt.clouddn.com/guideImageOne.jpeg",@"http://p71yuflyr.bkt.clouddn.com/guideImageTwo.jpeg"]
 
 #endif /* Header_h */

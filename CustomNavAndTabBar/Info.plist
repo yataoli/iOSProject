@@ -44,5 +44,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fangsong.ttf</string>
+		<string>Kaiti.ttf</string>
+		<string>Zapfino.ttf</string>
+	</array>
 </dict>
 </plist>
