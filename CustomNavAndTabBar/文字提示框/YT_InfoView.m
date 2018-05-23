@@ -35,12 +35,15 @@
 
 + (void)showInfo:(NSString *)info onView:(UIView *)view{
     //动态长度
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //刷新UI
+        YT_InfoView *infoView = [[YT_InfoView alloc] initwithInfo:info andView:view];
+        
+        [view addSubview:infoView];
+        [view bringSubviewToFront:infoView];
+        [self countDown:1.0 dimissView:infoView];
+    });
     
-    YT_InfoView *infoView = [[YT_InfoView alloc] initwithInfo:info andView:view];
-    
-    [view addSubview:infoView];
-    [view bringSubviewToFront:infoView];
-    [self countDown:1.0 dimissView:infoView];
     
 }
 + (void)countDown:(double)duration dimissView:(UIView *)view {
@@ -53,6 +56,7 @@
             self.alpha = 0.0;
         } completion:^(BOOL finished)
          {
+             self.infoLabel = nil;
              [self removeFromSuperview];
          }];
 }
