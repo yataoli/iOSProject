@@ -49,5 +49,32 @@
     = [jiafa1 decimalNumberByDividingBy:jiafa2];
     return [NSString stringWithFormat:@"%@",jiafa];
 }
+#pragma mark - NSRoundPlain:四舍五入 NSRoundDown 代表的就是 只舍不入 position保留小数点第几位
++(NSString *)roundString:(NSString *)number andRoundModel:(RoundingMode)model afterPoint:(int)position{
+    
+    NSUInteger modelType;
+    if (model == RoundDown) {
+        modelType = 1;
+    }else if (model == RoundUp){
+        modelType = 2;
+    }else{
+        modelType = 0;
+    }
+    
+    NSDecimalNumberHandler* roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:modelType scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    
+    NSDecimalNumber *ouncesDecimal;
+    
+    NSDecimalNumber *roundedOunces;
+    
+    
+    
+    ouncesDecimal = [[NSDecimalNumber alloc] initWithString:number];
+    
+    roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
+    
+    return [NSString stringWithFormat:@"%@",roundedOunces];
+    
+}
 
 @end

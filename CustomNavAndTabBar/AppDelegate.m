@@ -11,6 +11,7 @@
 #import "PushViewController.h"
 #import "YT_GuidePageViewController.h"
 #import "YT_NetWorkStateMonitor.h"
+#import "YTAlertViewManager.h"
 @interface AppDelegate ()<UITabBarControllerDelegate,YT_GuidePageViewControllerDelegate,YTNetWorkStateMonitorDelegate>
 
 @end
