@@ -28,6 +28,8 @@
 //获取一个随机整数范围在：[0,100)包括0，不包括100
 #define RandomNumber arc4random() % 100
 
+//RGB颜色
+#define RGB_Color(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 
 //屏幕宽
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
