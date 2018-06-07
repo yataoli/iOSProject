@@ -75,8 +75,8 @@
 //    [buttonCode setBackgroundColor:[UIColor redColor] forState:0];
 //    [buttonCode setBackgroundColor:[UIColor greenColor] forState:1];
 //    [self.view addSubview:buttonCode];
-    
-  
+//    [[NetworkingManager shareManager] checkNetWorkAuthor];
+//    [[NetworkingManager shareManager] startNetworkMonitoring];
     
 }
 - (void)buttonCodeButtonClick:(UIButton *)button{

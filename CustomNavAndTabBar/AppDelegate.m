@@ -29,7 +29,9 @@
     BOOL isUrl = [urlString isUrlString];
     NSLog(@"isUrl == %@",@(isUrl));
     
-    [[YT_NetWorkStateMonitor shareNetWorkStateMonitor] getNetWorkType];
+    
+    
+    
     [YT_NetWorkStateMonitor shareNetWorkStateMonitor].delegate = self;
     [[YT_NetWorkStateMonitor shareNetWorkStateMonitor] addNetWorkStateMonitor];
     
@@ -59,6 +61,12 @@
     }
     [self.window makeKeyAndVisible];
     
+    if ([[[YT_NetWorkStateMonitor shareNetWorkStateMonitor] getNetWorkType] isEqualToString:@"NO"]) {
+        [[YTAlertViewManager shareManager] showWithType:AlertViewTypeNoNetwork];
+    }
+
+
+    
     return YES;
 }
 - (void)enterViewController{
@@ -76,10 +84,11 @@
         
         [[YTAlertViewManager shareManager] showWithType:AlertViewTypeSuccess];
         [YTAlertViewManager shareManager].topTxt = type;
-        [YTAlertViewManager shareManager].lefImageName = @"post_animate_add";
+//        [YTAlertViewManager shareManager].lefImageName = @"post_animate_add";
+        [[YTAlertViewManager shareManager] dismissAfterTime:3];
         
     }
-    [[YTAlertViewManager shareManager] dismissAfterTime:3];
+    
     
 }
 #pragma mark - 将要选中tabBar上按钮的时候会调用这个协议方法

@@ -5,9 +5,10 @@
 //  Created by YYKit on 2017/5/27.
 //  Copyright © 2017年 YZ. All rights reserved.
 //
-
-#define Start_Height -64
-#define Height 64
+#define IS_IPHONE_X (fabs( (double)SCREEN_HEIGHT - (double )812) < DBL_EPSILON)
+#define YT_StatusAndNavBar_Height (IS_IPHONE_X ? 88.f:64.f)
+#define StartBar_Height (IS_IPHONE_X ? 44.f:20.f)
+#define Height (IS_IPHONE_X ? 88.f:64.f)
 #define Screen_Width [UIScreen mainScreen].bounds.size.width
 #define Left_Offset 45
 #define Font_Size 14.0f
@@ -16,7 +17,6 @@
 #define Image_Width 20
 
 #import "YTAlertViewManager.h"
-
 @interface YTAlertView ()
 @property (nonatomic,strong) UIImageView *imageView;
 @property (nonatomic,strong) UILabel *tipsLabel;
@@ -33,8 +33,8 @@
     if (_imageView == nil)
     {
         _imageView = [[UIImageView alloc]init];
-        _imageView.frame = CGRectMake(0, 0, Image_Width, Image_Width);
-        _imageView.center = CGPointMake(Image_Center_X, Image_Center_Y);
+        _imageView.frame = CGRectMake(15, StartBar_Height + (Height - StartBar_Height - Image_Width)/2.0, Image_Width, Image_Width);
+//        _imageView.center = CGPointMake(Image_Center_X, Image_Center_Y);
         [self addSubview:_imageView];
     }
     return _imageView;
@@ -47,7 +47,7 @@
     {
         _tipsLabel = [[UILabel alloc]init];
         _tipsLabel.numberOfLines = 0;
-        _tipsLabel.frame = CGRectMake(Left_Offset, 20, Screen_Width - Left_Offset, 40);
+        _tipsLabel.frame = CGRectMake(Left_Offset, StartBar_Height + (Height - StartBar_Height - 40)/2.0, Screen_Width - Left_Offset, 40);
         _tipsLabel.textAlignment = NSTextAlignmentLeft;
         _tipsLabel.font = [UIFont systemFontOfSize:Font_Size];
         [self addSubview:_tipsLabel];
@@ -62,7 +62,7 @@
     {
         case AlertViewTypeSuccess:
         {
-            self.frame = CGRectMake(0, Start_Height, Screen_Width, Height);
+            self.frame = CGRectMake(0, 0, Screen_Width, Height);
             self.backgroundColor = [UIColor colorWithRed:229/250.0 green:229/250.0 blue:229/250.0 alpha:1.0];
             self.imageView.image = [UIImage imageNamed:@"success.png"];
             self.tipsLabel.text = @"Success!";
@@ -71,7 +71,7 @@
             break;
         case AlertViewTypeError:
         {
-            self.frame = CGRectMake(0, Start_Height, Screen_Width, Height);
+            self.frame = CGRectMake(0, 0, Screen_Width, Height);
             self.backgroundColor = [UIColor colorWithRed:238/250.0 green:121/250.0 blue:66/250.0 alpha:1.0];
             self.imageView.image = [UIImage imageNamed:@"error.png"];
             self.tipsLabel.text = @"Error!";
@@ -80,7 +80,7 @@
             break;
         case AlertViewTypeNoNetwork:
         {
-            self.frame = CGRectMake(0, Start_Height, Screen_Width, Height);
+            self.frame = CGRectMake(0, 0, Screen_Width, Height);
             self.backgroundColor = [UIColor colorWithRed:238/250.0 green:121/250.0 blue:66/250.0 alpha:1.0];
             self.imageView.image = [UIImage imageNamed:@"nonetwork.png"];
             self.tipsLabel.text = @"当前网络不可用,请检查您的网络设置";
@@ -111,7 +111,7 @@
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          [[UIApplication sharedApplication].keyWindow bringSubviewToFront:self];
-                         self.center = CGPointMake(self.center.x, 32);
+                         self.center = CGPointMake(self.center.x, Height/2.0);
                      }
                      completion:^(BOOL finished) {
                      }];
@@ -126,7 +126,7 @@
           initialSpringVelocity:6.0f
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         self.center = CGPointMake(self.center.x, -32);
+                         self.center = CGPointMake(self.center.x, -Height/2.0);
                      }
                      completion:^(BOOL finished) {
                      }];
@@ -144,7 +144,7 @@
     dispatch_once(&onceToken, ^{
         shareManager = [[YTAlertViewManager alloc]init];
         shareManager.alertView = [[YTAlertView alloc]init];
-        [[UIApplication sharedApplication].keyWindow addSubview:shareManager.alertView];
+        [[UIApplication sharedApplication].delegate.window addSubview:shareManager.alertView];
 
     });
     return shareManager;
@@ -181,4 +181,6 @@
         });
     });
 }
+
+
 @end

@@ -117,20 +117,19 @@
     return isMatch;
 }
 //  判断字符串是否为空
-+(BOOL)isNULL:(id)string{
-    
-    if (string == nil) {
-        return YES;
-    }
-    if (string == NULL) {
-        return YES;
-    }
-    if ([string isKindOfClass:[NSNull class]]) {
-        return YES;
-    }
-    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0) {
-        return YES;
-    }
+- (BOOL)isBlankString{
+    if (self == NULL || [self isEqual:nil] || [self isEqual:Nil] || self == nil)
+        return  YES;
+    if ([self isEqual:[NSNull null]])
+        return  YES;
+    if (![self isKindOfClass:[NSString class]] )
+        return  YES;
+    if (0 == [self length] || 0 == [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length])
+        return  YES;
+    if([self isEqualToString:@"(null)"])
+        return  YES;
+    if([self isEqualToString:@"<null>"])
+        return  YES;
     return NO;
 }
 

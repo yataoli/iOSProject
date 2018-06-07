@@ -23,6 +23,7 @@
 
 @property (nonatomic,weak) id <YTNetWorkStateMonitorDelegate> delegate;
 @property (nonatomic,strong) Reachability *conn;
+@property (nonatomic) BOOL *isFirstLoad;
 /**
  * 实例化单例对象
  */

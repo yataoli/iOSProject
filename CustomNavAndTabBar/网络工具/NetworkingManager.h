@@ -84,4 +84,13 @@ typedef void(^URLSessionDataTask)(NSURLSessionDataTask *task);
 
 + (NSURLSessionDataTask *)GET:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask;
 + (NSURLSessionDataTask *)POST:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask;
+/**
+ * 开始网络状态监听
+ */
+- (void)startNetworkMonitoring;
+/**
+ * 检查网络是否授权
+ */
+- (void)checkNetWorkAuthor;
+
 @end

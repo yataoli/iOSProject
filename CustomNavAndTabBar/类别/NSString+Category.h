@@ -50,8 +50,10 @@
  */
 - (BOOL)checkAllNumber;
 
-// 非空判断
-+(BOOL)isNULL:(id)string;
+/**
+ * 字符串非空判断
+ */
+- (BOOL)isBlankString;
 
 
 //把指定时间转化为时间戳
