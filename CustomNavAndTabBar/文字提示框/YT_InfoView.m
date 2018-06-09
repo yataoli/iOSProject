@@ -21,13 +21,20 @@
         self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
         self.layer.cornerRadius = 4.0;
         self.layer.masksToBounds = YES;
-        [self addSubview:self.infoLabel];
+        self.frame = CGRectMake((view.frame.size.width - self.textWith)/2.0, (view.frame.size.height - 30)/2.0, self.textWith, 30);
+        self.infoLabel = [[UILabel alloc] init];
+        self.infoLabel.frame = CGRectMake(0, 0, self.textWith, self.frame.size.height);
+        self.infoLabel.numberOfLines = 0;
+        self.infoLabel.textAlignment = 1;
+        self.infoLabel.font = [UIFont systemFontOfSize:15.0];
         self.infoLabel.textColor = [UIColor whiteColor];
         self.infoLabel.font = [UIFont systemFontOfSize:15.0];
         self.infoLabel.text = info;
-        self.frame = CGRectMake((view.frame.size.width - self.textWith)/2.0, (view.frame.size.height - 30)/2.0, self.textWith, 30);
-        self.infoLabel.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-
+        
+        
+        
+        [self addSubview:self.infoLabel];
+        
         
     }
     return self;
@@ -52,25 +59,13 @@
 }
 - (void)dismiss
 {
-        [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.alpha = 0.0;
-        } completion:^(BOOL finished)
-         {
-             self.infoLabel = nil;
-             [self removeFromSuperview];
-         }];
-}
-- (UILabel *)infoLabel
-{
-    if (!_infoLabel)
-    {
-        _infoLabel = [[UILabel alloc] init];
-        _infoLabel.numberOfLines = 0;
-        _infoLabel.textAlignment = 1;
-        _infoLabel.font = [UIFont systemFontOfSize:15.0];
-        _infoLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    }
-    return _infoLabel;
+    [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.alpha = 0.0;
+    } completion:^(BOOL finished)
+     {
+         self.infoLabel = nil;
+         [self removeFromSuperview];
+     }];
 }
 
 - (CGRect)createSize:(NSString *)lableStr andFont:(NSInteger)fondS andSize:(CGSize)mysize andName:(NSString *)name;
@@ -87,11 +82,11 @@
     return rect;
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end
