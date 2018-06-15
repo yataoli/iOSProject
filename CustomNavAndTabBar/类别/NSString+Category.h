@@ -56,8 +56,15 @@
 - (BOOL)isBlankString;
 
 
-//把指定时间转化为时间戳
+/**
+ * 把指定时间转化为时间戳
+ */
 + (NSString *)getTimeIntervalWithDate:(NSDate *)date;
+
+/**
+ * 把时间 date 转化指定格式 （yyyy-MM-dd HH:mm）
+ */
+- (NSString *)getTimeStringWithDate:(NSDate *)date andFormat:(NSString *)format;
 
 //把指定时间戳（秒）转化为指定格式 （yyyy-MM-dd HH:mm）
 + (NSString *)getTime:(NSString *)getTimeStr withFormate:(NSString *)timeFormate;
@@ -70,4 +77,5 @@
  *把时间字符串转化为刚刚、3分钟前、几小时前。。（后台返回的时间格式 2017-10-07 11:30:10）
  */
 - (NSString *)changeTimeToSecMinHoursDay;
+
 @end

@@ -1074,14 +1074,14 @@
 				A093064E20AD521D00820F51 /* YT_Device.h */,
 				A093064D20AD521D00820F51 /* YT_Device.m */,
 				A024762520A446A300AFCC36 /* NSString+Category.h */,
+				A024762A20A446A300AFCC36 /* NSString+Category.m */,
 				A024762620A446A300AFCC36 /* UIView+Extension.h */,
+				A024762D20A446A300AFCC36 /* UIView+Extension.m */,
+				A024762C20A446A300AFCC36 /* UIButton+Category.h */,
 				A024762720A446A300AFCC36 /* UIButton+Category.m */,
 				A024762820A446A300AFCC36 /* UITextField+Category.h */,
-				A024762920A446A300AFCC36 /* UIColor+HexRGB.h */,
-				A024762A20A446A300AFCC36 /* NSString+Category.m */,
 				A024762B20A446A300AFCC36 /* UITextField+Category.m */,
-				A024762C20A446A300AFCC36 /* UIButton+Category.h */,
-				A024762D20A446A300AFCC36 /* UIView+Extension.m */,
+				A024762920A446A300AFCC36 /* UIColor+HexRGB.h */,
 				A024762E20A446A300AFCC36 /* UIColor+HexRGB.m */,
 			);
 			path = "类别";

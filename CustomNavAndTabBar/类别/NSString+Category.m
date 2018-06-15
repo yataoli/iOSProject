@@ -289,6 +289,16 @@
     
     return dateStr;
 }
+/**
+ * 把时间 date 转化指定格式 （yyyy-MM-dd HH:mm）
+ */
+- (NSString *)getTimeStringWithDate:(NSDate *)date andFormat:(NSString *)format{
+    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+    [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *str =[objDateformat stringFromDate:date];
+    return str;
+}
+
 //把指定时间戳（秒）转化为指定格式
 + (NSString *)getTime:(NSString *)getTimeStr withFormate:(NSString *)timeFormate
 {
