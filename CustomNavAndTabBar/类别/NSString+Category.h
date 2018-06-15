@@ -64,7 +64,7 @@
 /**
  * 把时间 date 转化指定格式 （yyyy-MM-dd HH:mm）
  */
-- (NSString *)getTimeStringWithDate:(NSDate *)date andFormat:(NSString *)format;
++ (NSString *)getTimeStringWithDate:(NSDate *)date andFormat:(NSString *)format;
 
 //把指定时间戳（秒）转化为指定格式 （yyyy-MM-dd HH:mm）
 + (NSString *)getTime:(NSString *)getTimeStr withFormate:(NSString *)timeFormate;

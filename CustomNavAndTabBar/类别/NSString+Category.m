@@ -292,7 +292,7 @@
 /**
  * 把时间 date 转化指定格式 （yyyy-MM-dd HH:mm）
  */
-- (NSString *)getTimeStringWithDate:(NSDate *)date andFormat:(NSString *)format{
++ (NSString *)getTimeStringWithDate:(NSDate *)date andFormat:(NSString *)format{
     NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
     [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSString *str =[objDateformat stringFromDate:date];
