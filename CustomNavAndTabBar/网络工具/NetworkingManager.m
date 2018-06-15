@@ -250,7 +250,7 @@
 - (void)networkingStatusDidChanged:(NSNotification*)info{
     NSDictionary *inforDict = [info userInfo];
     NSString *statusStr = [self getStringFromDict:inforDict withKey:AFNetworkingReachabilityNotificationStatusItem];
-    if (statusStr == nil || [statusStr isBlankString]) {
+    if (statusStr == nil || [self isBlankStringWithStr:statusStr]) {
         statusStr = [self getStringFromDict:inforDict withKey:@"LCNetworkingReachabilityNotificationStatusItem"];
     }
     
@@ -268,6 +268,22 @@
         //有网络
         
     }
+}
+#pragma mark - 判断字符串是否为空
+- (BOOL)isBlankStringWithStr:(NSString *)string{
+    if (string == NULL || [string isEqual:nil] || [string isEqual:Nil] || string == nil)
+        return  YES;
+    if ([string isEqual:[NSNull null]])
+        return  YES;
+    if (![string isKindOfClass:[NSString class]] )
+        return  YES;
+    if (0 == [string length] || 0 == [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length])
+        return  YES;
+    if([string isEqualToString:@"(null)"])
+        return  YES;
+    if([string isEqualToString:@"<null>"])
+        return  YES;
+    return NO;
 }
 
 - (NSString *)getStringFromDict:(NSDictionary*)dict withKey:(id)key{
