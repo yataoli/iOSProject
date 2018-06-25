@@ -313,22 +313,13 @@
 }
 #pragma mark - 字符串是否包含中文
 - (BOOL)isContainsChinese{
-    
-    NSString *MOBILE = @"[\u4e00-\u9fa5]";
-    
-    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
-    
-    NSRange range;
-    for(int i=0; i<self.length; i+=range.length){
-        range = [self rangeOfComposedCharacterSequenceAtIndex:i];
-        NSString *s = [self substringWithRange:range];
-        
-        if (![regextestmobile evaluateWithObject:s]) {
-            
-            return NO;
+    for (NSInteger i = 0; i < self.length; i++) {
+        unichar ch = [self characterAtIndex:i];
+        if (0x4E00 <= ch && ch <= 0x9FA5) {
+            return YES;
         }
     }
-    
-    return YES;
+    return NO;
+
 }
 @end
