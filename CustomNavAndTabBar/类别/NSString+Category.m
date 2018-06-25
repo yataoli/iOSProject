@@ -97,7 +97,8 @@
 }
 #pragma mark - 正则匹配URL
 - (BOOL)isUrlString{
-    NSString *pattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+//    NSString *pattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+    NSString *pattern = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)";
     NSPredicate *pred = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", pattern];
     BOOL isMatch = [pred evaluateWithObject:self];
     return isMatch;
@@ -310,5 +311,24 @@
     
     return myString;
 }
-
+#pragma mark - 字符串是否包含中文
+- (BOOL)isContainsChinese{
+    
+    NSString *MOBILE = @"[\u4e00-\u9fa5]";
+    
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    
+    NSRange range;
+    for(int i=0; i<self.length; i+=range.length){
+        range = [self rangeOfComposedCharacterSequenceAtIndex:i];
+        NSString *s = [self substringWithRange:range];
+        
+        if (![regextestmobile evaluateWithObject:s]) {
+            
+            return NO;
+        }
+    }
+    
+    return YES;
+}
 @end

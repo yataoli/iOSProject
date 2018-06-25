@@ -78,4 +78,9 @@
  */
 - (NSString *)changeTimeToSecMinHoursDay;
 
+/**
+ * 判断字符串中是否包含中文
+ */
+- (BOOL)isContainsChinese;
+
 @end
