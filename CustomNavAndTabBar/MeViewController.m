@@ -10,6 +10,7 @@
 #import "SkinViewController.h"
 #import "GeRenMessageViewController.h"
 #import "LoginViewController.h"
+#import "GaoFangTouTiaoMainController.h"
 @interface MeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *dataSource;
@@ -22,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    _dataSource = [[NSMutableArray alloc] initWithObjects:@"皮肤管理",@"个人信息",@"登录", nil];
+    _dataSource = [[NSMutableArray alloc] initWithObjects:@"皮肤管理",@"个人信息",@"登录",@"仿头条界面", nil];
     _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     _tableView.delegate = self;
@@ -55,10 +56,16 @@
         [self.navigationController pushViewController:view animated:YES];
 
         
-    }else{
+    }else if(indexPath.row == 2){
         LoginViewController *view = [[LoginViewController alloc] init];
         view.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:view animated:YES];
+    }else{
+        GaoFangTouTiaoMainController *vc = [[GaoFangTouTiaoMainController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+
+        
     }
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

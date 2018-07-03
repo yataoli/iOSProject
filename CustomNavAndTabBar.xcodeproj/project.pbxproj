@@ -147,6 +147,14 @@
 		8AA3B7351F384D2C001E70A7 /* 1111.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3B7311F384D2C001E70A7 /* 1111.bundle */; };
 		8AA3B7371F384D3F001E70A7 /* 1114.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3B7361F384D3F001E70A7 /* 1114.bundle */; };
 		8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3B7391F385016001E70A7 /* MyNavigationViewController.m */; };
+		A00BFF7320EB0F610089233D /* GaoFangTouTiaoMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7220EB0F610089233D /* GaoFangTouTiaoMainController.m */; };
+		A00BFF8520EB0FE80089233D /* UIButton+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7820EB0FE80089233D /* UIButton+SGPagingView.m */; };
+		A00BFF8620EB0FE80089233D /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7920EB0FE80089233D /* UIView+SGPagingView.m */; };
+		A00BFF8720EB0FE80089233D /* SGPageContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7B20EB0FE80089233D /* SGPageContentScrollView.m */; };
+		A00BFF8820EB0FE80089233D /* SGPageContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7E20EB0FE80089233D /* SGPageContentCollectionView.m */; };
+		A00BFF8920EB0FE80089233D /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF8020EB0FE80089233D /* SGPageTitleView.m */; };
+		A00BFF8A20EB0FE80089233D /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF8120EB0FE80089233D /* SGPageTitleViewConfigure.m */; };
+		A00BFF8D20EB101E0089233D /* GaoFangTouTiaoTestContenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF8C20EB101E0089233D /* GaoFangTouTiaoTestContenVC.m */; };
 		A02470D020A1D97500AFCC36 /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A02470C120A1D97500AFCC36 /* NetworkingManager.m */; };
 		A02470D120A1D97500AFCC36 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A02470C720A1D97500AFCC36 /* AFURLResponseSerialization.m */; };
 		A02470D220A1D97500AFCC36 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A02470C820A1D97500AFCC36 /* AFHTTPSessionManager.m */; };
@@ -392,6 +400,23 @@
 		8AA3B7361F384D3F001E70A7 /* 1114.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = 1114.bundle; sourceTree = "<group>"; };
 		8AA3B7381F385016001E70A7 /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
 		8AA3B7391F385016001E70A7 /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
+		A00BFF7120EB0F610089233D /* GaoFangTouTiaoMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GaoFangTouTiaoMainController.h; sourceTree = "<group>"; };
+		A00BFF7220EB0F610089233D /* GaoFangTouTiaoMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GaoFangTouTiaoMainController.m; sourceTree = "<group>"; };
+		A00BFF7620EB0FE80089233D /* UIButton+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGPagingView.h"; sourceTree = "<group>"; };
+		A00BFF7720EB0FE80089233D /* UIView+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGPagingView.h"; sourceTree = "<group>"; };
+		A00BFF7820EB0FE80089233D /* UIButton+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGPagingView.m"; sourceTree = "<group>"; };
+		A00BFF7920EB0FE80089233D /* UIView+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGPagingView.m"; sourceTree = "<group>"; };
+		A00BFF7B20EB0FE80089233D /* SGPageContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentScrollView.m; sourceTree = "<group>"; };
+		A00BFF7C20EB0FE80089233D /* SGPageContentCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentCollectionView.h; sourceTree = "<group>"; };
+		A00BFF7D20EB0FE80089233D /* SGPageContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentScrollView.h; sourceTree = "<group>"; };
+		A00BFF7E20EB0FE80089233D /* SGPageContentCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentCollectionView.m; sourceTree = "<group>"; };
+		A00BFF8020EB0FE80089233D /* SGPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleView.m; sourceTree = "<group>"; };
+		A00BFF8120EB0FE80089233D /* SGPageTitleViewConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleViewConfigure.m; sourceTree = "<group>"; };
+		A00BFF8220EB0FE80089233D /* SGPageTitleViewConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleViewConfigure.h; sourceTree = "<group>"; };
+		A00BFF8320EB0FE80089233D /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
+		A00BFF8420EB0FE80089233D /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
+		A00BFF8B20EB101E0089233D /* GaoFangTouTiaoTestContenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GaoFangTouTiaoTestContenVC.h; sourceTree = "<group>"; };
+		A00BFF8C20EB101E0089233D /* GaoFangTouTiaoTestContenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GaoFangTouTiaoTestContenVC.m; sourceTree = "<group>"; };
 		A02470C020A1D97500AFCC36 /* NetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingManager.h; sourceTree = "<group>"; };
 		A02470C120A1D97500AFCC36 /* NetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingManager.m; sourceTree = "<group>"; };
 		A02470C320A1D97500AFCC36 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
@@ -965,12 +990,12 @@
 		8A69A1E31F2B0652004F8BD4 /* CustomNavAndTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				A00BFF7020EB0C590089233D /* 仿头条界面 */,
 				17C117B6202BF29100C4629B /* Other */,
 				8A69A22C1F2B375D004F8BD4 /* CustomTabBar */,
 				8A4525D71F5A9597004EB874 /* Globle */,
 				8A1FB5071F4A6DDE00DDC445 /* 首页 */,
-				8A69A21D1F2B0831004F8BD4 /* ShopCarViewController.h */,
-				8A69A21E1F2B0831004F8BD4 /* ShopCarViewController.m */,
+				A00BFF6F20EB0C480089233D /* 购物车 */,
 				8A81E9351F593ED6000A3C8E /* 我的界面 */,
 				8A81E9341F593EBC000A3C8E /* 中间按钮界面 */,
 				8A69A1E41F2B0652004F8BD4 /* Supporting Files */,
@@ -1036,6 +1061,71 @@
 				8A81E9371F593F4E000A3C8E /* GeRenMessageViewController.m */,
 			);
 			name = "我的界面";
+			sourceTree = "<group>";
+		};
+		A00BFF6F20EB0C480089233D /* 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				8A69A21D1F2B0831004F8BD4 /* ShopCarViewController.h */,
+				8A69A21E1F2B0831004F8BD4 /* ShopCarViewController.m */,
+			);
+			name = "购物车";
+			sourceTree = "<group>";
+		};
+		A00BFF7020EB0C590089233D /* 仿头条界面 */ = {
+			isa = PBXGroup;
+			children = (
+				A00BFF7420EB0FE80089233D /* SGPagingView */,
+				A00BFF7120EB0F610089233D /* GaoFangTouTiaoMainController.h */,
+				A00BFF7220EB0F610089233D /* GaoFangTouTiaoMainController.m */,
+				A00BFF8B20EB101E0089233D /* GaoFangTouTiaoTestContenVC.h */,
+				A00BFF8C20EB101E0089233D /* GaoFangTouTiaoTestContenVC.m */,
+			);
+			path = "仿头条界面";
+			sourceTree = "<group>";
+		};
+		A00BFF7420EB0FE80089233D /* SGPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				A00BFF7520EB0FE80089233D /* Category */,
+				A00BFF7A20EB0FE80089233D /* SGPageContent */,
+				A00BFF7F20EB0FE80089233D /* SGPageTitle */,
+				A00BFF8420EB0FE80089233D /* SGPagingView.h */,
+			);
+			path = SGPagingView;
+			sourceTree = "<group>";
+		};
+		A00BFF7520EB0FE80089233D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A00BFF7620EB0FE80089233D /* UIButton+SGPagingView.h */,
+				A00BFF7720EB0FE80089233D /* UIView+SGPagingView.h */,
+				A00BFF7820EB0FE80089233D /* UIButton+SGPagingView.m */,
+				A00BFF7920EB0FE80089233D /* UIView+SGPagingView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A00BFF7A20EB0FE80089233D /* SGPageContent */ = {
+			isa = PBXGroup;
+			children = (
+				A00BFF7B20EB0FE80089233D /* SGPageContentScrollView.m */,
+				A00BFF7C20EB0FE80089233D /* SGPageContentCollectionView.h */,
+				A00BFF7D20EB0FE80089233D /* SGPageContentScrollView.h */,
+				A00BFF7E20EB0FE80089233D /* SGPageContentCollectionView.m */,
+			);
+			path = SGPageContent;
+			sourceTree = "<group>";
+		};
+		A00BFF7F20EB0FE80089233D /* SGPageTitle */ = {
+			isa = PBXGroup;
+			children = (
+				A00BFF8020EB0FE80089233D /* SGPageTitleView.m */,
+				A00BFF8120EB0FE80089233D /* SGPageTitleViewConfigure.m */,
+				A00BFF8220EB0FE80089233D /* SGPageTitleViewConfigure.h */,
+				A00BFF8320EB0FE80089233D /* SGPageTitleView.h */,
+			);
+			path = SGPageTitle;
 			sourceTree = "<group>";
 		};
 		A02470BF20A1D97500AFCC36 /* 网络工具 */ = {
@@ -1321,7 +1411,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00BFF8920EB0FE80089233D /* SGPageTitleView.m in Sources */,
+				A00BFF8720EB0FE80089233D /* SGPageContentScrollView.m in Sources */,
 				17C1182C202C1D7400C4629B /* MJRefreshComponent.m in Sources */,
+				A00BFF8A20EB0FE80089233D /* SGPageTitleViewConfigure.m in Sources */,
 				A093064F20AD521D00820F51 /* YT_Device.m in Sources */,
 				17C11837202C1D7400C4629B /* MJRefreshStateHeader.m in Sources */,
 				8A4525F81F5D1E5A004EB874 /* AESCipher.m in Sources */,
@@ -1333,6 +1426,7 @@
 				A024763120A446A300AFCC36 /* UITextField+Category.m in Sources */,
 				17C1183C202C1D7400C4629B /* UIScrollView+MJRefresh.m in Sources */,
 				17688D87205A6B8B002427F8 /* YT_Compute_Object.m in Sources */,
+				A00BFF8D20EB101E0089233D /* GaoFangTouTiaoTestContenVC.m in Sources */,
 				A02470D320A1D97500AFCC36 /* AFURLSessionManager.m in Sources */,
 				8A69A1E91F2B0652004F8BD4 /* AppDelegate.m in Sources */,
 				17C11843202C1E9A00C4629B /* YT_MJRefreshFooter.m in Sources */,
@@ -1343,6 +1437,7 @@
 				A02470D620A1D97500AFCC36 /* AFSecurityPolicy.m in Sources */,
 				A02470D120A1D97500AFCC36 /* AFURLResponseSerialization.m in Sources */,
 				A024763020A446A300AFCC36 /* NSString+Category.m in Sources */,
+				A00BFF8820EB0FE80089233D /* SGPageContentCollectionView.m in Sources */,
 				17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */,
 				A024763220A446A300AFCC36 /* UIView+Extension.m in Sources */,
 				8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */,
@@ -1367,6 +1462,7 @@
 				177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */,
 				17C11833202C1D7400C4629B /* MJRefreshBackNormalFooter.m in Sources */,
 				17C11835202C1D7400C4629B /* MJRefreshGifHeader.m in Sources */,
+				A00BFF8520EB0FE80089233D /* UIButton+SGPagingView.m in Sources */,
 				17C1183D202C1D7400C4629B /* UIView+MJExtension.m in Sources */,
 				17C11846202C200600C4629B /* YT_MJRefreshGifHeader.m in Sources */,
 				A02470D020A1D97500AFCC36 /* NetworkingManager.m in Sources */,
@@ -1379,11 +1475,13 @@
 				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
 				179BCD3220AFC4B50031742D /* DXPopover.m in Sources */,
 				17C11830202C1D7400C4629B /* MJRefreshAutoNormalFooter.m in Sources */,
+				A00BFF8620EB0FE80089233D /* UIView+SGPagingView.m in Sources */,
 				8A81E9381F593F4F000A3C8E /* GeRenMessageViewController.m in Sources */,
 				8A4525E21F5CE541004EB874 /* LoginViewController.m in Sources */,
 				17C11840202C1E0800C4629B /* YT_MJRefreshHeader.m in Sources */,
 				17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */,
 				8A4525EA1F5CE956004EB874 /* LoginView.m in Sources */,
+				A00BFF7320EB0F610089233D /* GaoFangTouTiaoMainController.m in Sources */,
 				8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */,
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
 				17F76D772064EFB50021722C /* YT_H5ViewController.m in Sources */,
