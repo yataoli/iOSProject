@@ -97,7 +97,8 @@
 }
 #pragma mark - 正则匹配URL
 - (BOOL)isUrlString{
-    NSString *pattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+//    NSString *pattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+    NSString *pattern = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)";
     NSPredicate *pred = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", pattern];
     BOOL isMatch = [pred evaluateWithObject:self];
     return isMatch;
@@ -310,5 +311,15 @@
     
     return myString;
 }
+#pragma mark - 字符串是否包含中文
+- (BOOL)isContainsChinese{
+    for (NSInteger i = 0; i < self.length; i++) {
+        unichar ch = [self characterAtIndex:i];
+        if (0x4E00 <= ch && ch <= 0x9FA5) {
+            return YES;
+        }
+    }
+    return NO;
 
+}
 @end

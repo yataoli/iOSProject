@@ -596,7 +596,7 @@
 				179BCD7D20B00A9D0031742D /* 字体库 */,
 				179BCD7920B001380031742D /* GCD定时器 */,
 				179BCD2F20AFC4B50031742D /* DXPopover */,
-				A024762420A446A300AFCC36 /* 类别 */,
+				A024762420A446A300AFCC36 /* Category */,
 				A02470BF20A1D97500AFCC36 /* 网络工具 */,
 				17ED62C9207F4C740051B25F /* 网络状态监听 */,
 				17ED62B6207DB36E0051B25F /* 引导页封装 */,
@@ -1158,7 +1158,7 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		A024762420A446A300AFCC36 /* 类别 */ = {
+		A024762420A446A300AFCC36 /* Category */ = {
 			isa = PBXGroup;
 			children = (
 				A093064E20AD521D00820F51 /* YT_Device.h */,
@@ -1174,7 +1174,7 @@
 				A024762920A446A300AFCC36 /* UIColor+HexRGB.h */,
 				A024762E20A446A300AFCC36 /* UIColor+HexRGB.m */,
 			);
-			path = "类别";
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
