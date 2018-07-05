@@ -3,7 +3,7 @@
 //  CustomNavAndTabBar
 //
 //  Created by yatao li on 2018/5/10.
-//  Copyright © 2018年 郑州鹿客互联网科技有限公司. All rights reserved.
+//  Copyright © 2018年 李亚涛. All rights reserved.
 //
 
 #import "YT_InfoView.h"

@@ -3,7 +3,7 @@
 //  BlockTest
 //
 //  Created by suge on 2017/4/3.
-//  Copyright © 2017年 郑州鹿客互联网科技有限公司. All rights reserved.
+//  Copyright © 2017年 李亚涛. All rights reserved.
 //
 
 #import "YT_CheckVersionManager.h"

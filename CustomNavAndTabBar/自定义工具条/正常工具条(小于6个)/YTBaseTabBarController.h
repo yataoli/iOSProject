@@ -1,13 +1,13 @@
 //
-//  YT_CenterButton.h
+//  YTBaseTabBarController.h
 //  CustomNavAndTabBar
 //
-//  Created by 付宝网络 on 2018/2/22.
+//  Created by yatao li on 2018/7/5.
 //  Copyright © 2018年 李亚涛. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface YT_CenterButton : UIButton
+@interface YTBaseTabBarController : UITabBarController
 
 @end
