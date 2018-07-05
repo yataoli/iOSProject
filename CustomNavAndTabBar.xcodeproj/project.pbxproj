@@ -132,11 +132,9 @@
 		8A69A1F41F2B0652004F8BD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A69A1F21F2B0652004F8BD4 /* LaunchScreen.storyboard */; };
 		8A69A1FF1F2B0653004F8BD4 /* CustomNavAndTabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A1FE1F2B0653004F8BD4 /* CustomNavAndTabBarTests.m */; };
 		8A69A20A1F2B0653004F8BD4 /* CustomNavAndTabBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A2091F2B0653004F8BD4 /* CustomNavAndTabBarUITests.m */; };
-		8A69A2191F2B07C2004F8BD4 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A2181F2B07C2004F8BD4 /* BaseTabBarController.m */; };
 		8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A21B1F2B0805004F8BD4 /* HomeViewController.m */; };
 		8A69A21F1F2B0831004F8BD4 /* ShopCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A21E1F2B0831004F8BD4 /* ShopCarViewController.m */; };
 		8A69A2221F2B084D004F8BD4 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A2211F2B084D004F8BD4 /* MeViewController.m */; };
-		8A69A2281F2B0F4D004F8BD4 /* MyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A2271F2B0F4D004F8BD4 /* MyTabBar.m */; };
 		8A69A22B1F2B16EF004F8BD4 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A22A1F2B16EF004F8BD4 /* PushViewController.m */; };
 		8A81E9381F593F4F000A3C8E /* GeRenMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A81E9371F593F4E000A3C8E /* GeRenMessageViewController.m */; };
 		8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3B7241F383E23001E70A7 /* SkinViewController.m */; };
@@ -146,7 +144,9 @@
 		8AA3B7341F384D2C001E70A7 /* 1110.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3B7301F384D2C001E70A7 /* 1110.bundle */; };
 		8AA3B7351F384D2C001E70A7 /* 1111.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3B7311F384D2C001E70A7 /* 1111.bundle */; };
 		8AA3B7371F384D3F001E70A7 /* 1114.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3B7361F384D3F001E70A7 /* 1114.bundle */; };
-		8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3B7391F385016001E70A7 /* MyNavigationViewController.m */; };
+		A00B00B520EDB8930089233D /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00B220EDB8930089233D /* BaseTabBarController.m */; };
+		A00B00B620EDB8930089233D /* MyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00B320EDB8930089233D /* MyTabBar.m */; };
+		A00B00B720EDB8930089233D /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00B420EDB8930089233D /* MyNavigationViewController.m */; };
 		A00BFF7320EB0F610089233D /* GaoFangTouTiaoMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7220EB0F610089233D /* GaoFangTouTiaoMainController.m */; };
 		A00BFF8520EB0FE80089233D /* UIButton+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7820EB0FE80089233D /* UIButton+SGPagingView.m */; };
 		A00BFF8620EB0FE80089233D /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7920EB0FE80089233D /* UIView+SGPagingView.m */; };
@@ -375,16 +375,12 @@
 		8A69A2051F2B0653004F8BD4 /* CustomNavAndTabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomNavAndTabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A69A2091F2B0653004F8BD4 /* CustomNavAndTabBarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNavAndTabBarUITests.m; sourceTree = "<group>"; };
 		8A69A20B1F2B0653004F8BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A69A2171F2B07C2004F8BD4 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
-		8A69A2181F2B07C2004F8BD4 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		8A69A21A1F2B0805004F8BD4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		8A69A21B1F2B0805004F8BD4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		8A69A21D1F2B0831004F8BD4 /* ShopCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCarViewController.h; sourceTree = "<group>"; };
 		8A69A21E1F2B0831004F8BD4 /* ShopCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCarViewController.m; sourceTree = "<group>"; };
 		8A69A2201F2B084D004F8BD4 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		8A69A2211F2B084D004F8BD4 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
-		8A69A2261F2B0F4D004F8BD4 /* MyTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBar.h; sourceTree = "<group>"; };
-		8A69A2271F2B0F4D004F8BD4 /* MyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBar.m; sourceTree = "<group>"; };
 		8A69A2291F2B16EF004F8BD4 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		8A69A22A1F2B16EF004F8BD4 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		8A81E9361F593F4E000A3C8E /* GeRenMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeRenMessageViewController.h; sourceTree = "<group>"; };
@@ -398,8 +394,12 @@
 		8AA3B7301F384D2C001E70A7 /* 1110.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = 1110.bundle; sourceTree = "<group>"; };
 		8AA3B7311F384D2C001E70A7 /* 1111.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = 1111.bundle; sourceTree = "<group>"; };
 		8AA3B7361F384D3F001E70A7 /* 1114.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = 1114.bundle; sourceTree = "<group>"; };
-		8AA3B7381F385016001E70A7 /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
-		8AA3B7391F385016001E70A7 /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
+		A00B00AF20EDB8930089233D /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		A00B00B020EDB8930089233D /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
+		A00B00B120EDB8930089233D /* MyTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBar.h; sourceTree = "<group>"; };
+		A00B00B220EDB8930089233D /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		A00B00B320EDB8930089233D /* MyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBar.m; sourceTree = "<group>"; };
+		A00B00B420EDB8930089233D /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
 		A00BFF7120EB0F610089233D /* GaoFangTouTiaoMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GaoFangTouTiaoMainController.h; sourceTree = "<group>"; };
 		A00BFF7220EB0F610089233D /* GaoFangTouTiaoMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GaoFangTouTiaoMainController.m; sourceTree = "<group>"; };
 		A00BFF7620EB0FE80089233D /* UIButton+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGPagingView.h"; sourceTree = "<group>"; };
@@ -990,9 +990,9 @@
 		8A69A1E31F2B0652004F8BD4 /* CustomNavAndTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				A00B00AD20EDB8930089233D /* 自定义工具条 */,
 				A00BFF7020EB0C590089233D /* 仿头条界面 */,
 				17C117B6202BF29100C4629B /* Other */,
-				8A69A22C1F2B375D004F8BD4 /* CustomTabBar */,
 				8A4525D71F5A9597004EB874 /* Globle */,
 				8A1FB5071F4A6DDE00DDC445 /* 首页 */,
 				A00BFF6F20EB0C480089233D /* 购物车 */,
@@ -1029,19 +1029,6 @@
 			path = CustomNavAndTabBarUITests;
 			sourceTree = "<group>";
 		};
-		8A69A22C1F2B375D004F8BD4 /* CustomTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				8A69A2171F2B07C2004F8BD4 /* BaseTabBarController.h */,
-				8A69A2181F2B07C2004F8BD4 /* BaseTabBarController.m */,
-				8A69A2261F2B0F4D004F8BD4 /* MyTabBar.h */,
-				8A69A2271F2B0F4D004F8BD4 /* MyTabBar.m */,
-				8AA3B7381F385016001E70A7 /* MyNavigationViewController.h */,
-				8AA3B7391F385016001E70A7 /* MyNavigationViewController.m */,
-			);
-			name = CustomTabBar;
-			sourceTree = "<group>";
-		};
 		8A81E9341F593EBC000A3C8E /* 中间按钮界面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,6 +1048,27 @@
 				8A81E9371F593F4E000A3C8E /* GeRenMessageViewController.m */,
 			);
 			name = "我的界面";
+			sourceTree = "<group>";
+		};
+		A00B00AD20EDB8930089233D /* 自定义工具条 */ = {
+			isa = PBXGroup;
+			children = (
+				A00B00AE20EDB8930089233D /* 中间突出工具条 */,
+			);
+			path = "自定义工具条";
+			sourceTree = "<group>";
+		};
+		A00B00AE20EDB8930089233D /* 中间突出工具条 */ = {
+			isa = PBXGroup;
+			children = (
+				A00B00AF20EDB8930089233D /* BaseTabBarController.h */,
+				A00B00B020EDB8930089233D /* MyNavigationViewController.h */,
+				A00B00B120EDB8930089233D /* MyTabBar.h */,
+				A00B00B220EDB8930089233D /* BaseTabBarController.m */,
+				A00B00B320EDB8930089233D /* MyTabBar.m */,
+				A00B00B420EDB8930089233D /* MyNavigationViewController.m */,
+			);
+			path = "中间突出工具条";
 			sourceTree = "<group>";
 		};
 		A00BFF6F20EB0C480089233D /* 购物车 */ = {
@@ -1433,6 +1441,7 @@
 				17C118C8202C24E100C4629B /* YT_MJRefreshAutoGifFooter.m in Sources */,
 				A02470D220A1D97500AFCC36 /* AFHTTPSessionManager.m in Sources */,
 				8A69A22B1F2B16EF004F8BD4 /* PushViewController.m in Sources */,
+				A00B00B520EDB8930089233D /* BaseTabBarController.m in Sources */,
 				17C1182F202C1D7400C4629B /* MJRefreshAutoGifFooter.m in Sources */,
 				A02470D620A1D97500AFCC36 /* AFSecurityPolicy.m in Sources */,
 				A02470D120A1D97500AFCC36 /* AFURLResponseSerialization.m in Sources */,
@@ -1450,12 +1459,12 @@
 				177B9B63201EEA7E0095B301 /* MBProgressHUD.m in Sources */,
 				8AA3B72D1F38448A001E70A7 /* SkinManager.m in Sources */,
 				8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */,
-				8A69A2191F2B07C2004F8BD4 /* BaseTabBarController.m in Sources */,
 				17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */,
 				1718B3B4202E90F10084150C /* SaveAndReadFileAtSandbox.m in Sources */,
 				A02470D420A1D97500AFCC36 /* AFURLRequestSerialization.m in Sources */,
 				17C11839202C1D7400C4629B /* MJRefreshConst.m in Sources */,
 				17ED62CF207F4C750051B25F /* YT_NetWorkStateMonitor.m in Sources */,
+				A00B00B620EDB8930089233D /* MyTabBar.m in Sources */,
 				8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */,
 				8A4525F01F5CF781004EB874 /* LoginViewModel.m in Sources */,
 				17664956205F4E10009F0D27 /* YT_CheckVersionManager.m in Sources */,
@@ -1472,7 +1481,6 @@
 				17ED62CE207F4C750051B25F /* Reachability.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				A024762F20A446A300AFCC36 /* UIButton+Category.m in Sources */,
-				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
 				179BCD3220AFC4B50031742D /* DXPopover.m in Sources */,
 				17C11830202C1D7400C4629B /* MJRefreshAutoNormalFooter.m in Sources */,
 				A00BFF8620EB0FE80089233D /* UIView+SGPagingView.m in Sources */,
@@ -1487,10 +1495,10 @@
 				17F76D772064EFB50021722C /* YT_H5ViewController.m in Sources */,
 				17C1182E202C1D7400C4629B /* MJRefreshHeader.m in Sources */,
 				179BCD7C20B001380031742D /* YT_GCD_Timer.m in Sources */,
+				A00B00B720EDB8930089233D /* MyNavigationViewController.m in Sources */,
 				8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */,
 				17C11832202C1D7400C4629B /* MJRefreshBackGifFooter.m in Sources */,
 				A02470D520A1D97500AFCC36 /* AFNetworkReachabilityManager.m in Sources */,
-				8A69A2281F2B0F4D004F8BD4 /* MyTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

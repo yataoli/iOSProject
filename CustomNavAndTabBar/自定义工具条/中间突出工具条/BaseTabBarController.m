@@ -35,59 +35,26 @@
     
     MyTabBar *tabBar = [[MyTabBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 49)];
     tabBar.tintColor = [UIColor colorWithRed:251.0f / 255.0f green:132.0f / 255.0f blue:0.0f alpha:1.0f];
-    
+    [self setValue:tabBar forKey:@"tabBar"];
     
     
     
     
     //首页
     HomeViewController *homeView =[[HomeViewController alloc] init];
-    MyNavigationViewController *homeNavigation = [[MyNavigationViewController alloc] initWithRootViewController:homeView];
-    [homeNavigation.navigationItem setHidesBackButton:YES];
-    [homeNavigation.navigationBar setBarTintColor:[UIColor whiteColor]];
-    
-    
-    UIImage *image1 =[[UIImage imageNamed:@"首页dpng"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UITabBarItem *item1 =[[UITabBarItem alloc]initWithTitle:@"首页" image:[[UIImage imageNamed:@"首页png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:image1];
-    homeNavigation.tabBarItem =item1;
-    [item1 setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorFromHexRGB:@"333333"],NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-    [item1 setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorFromHexRGB:@"f23030"],NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
-    [self addChildViewController:homeNavigation];
-    
+    [self addChildVC:homeView tabBarItemTitle:@"首页" navigationItemTitle:@"首页" normalImageName:@"首页png" selectedImageName:@"首页dpng"];
     
     
     //购物车
     ShopCarViewController *shopView =[[ShopCarViewController alloc] init];
-    MyNavigationViewController *shopNavigation = [[MyNavigationViewController alloc] initWithRootViewController:shopView];
-    [shopNavigation.navigationItem setHidesBackButton:YES];
-    [shopNavigation.navigationBar setBarTintColor:[UIColor whiteColor]];
-    
-
-    
-    
-    UIImage *image2 =[[UIImage imageNamed:@""]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UITabBarItem *item2 =[[UITabBarItem alloc]initWithTitle:@"购物车" image:[[UIImage imageNamed:@""]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:image2];
-    shopNavigation.tabBarItem =item2;
-    [item2 setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorFromHexRGB:@"333333"],NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-    [item2 setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorFromHexRGB:@"f23030"],NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
-    
-    [self addChildViewController:shopNavigation];
+     [self addChildVC:shopView tabBarItemTitle:@"购物车" navigationItemTitle:@"购物车" normalImageName:@"购物车png" selectedImageName:@"购物车dpng"];
     
     
     //我的
     MeViewController *meView =[[MeViewController alloc] init];
-    MyNavigationViewController *meNavigation = [[MyNavigationViewController alloc] initWithRootViewController:meView];
-    [meNavigation.navigationItem setHidesBackButton:YES];
-    [meNavigation.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self addChildVC:meView tabBarItemTitle:@"我的" navigationItemTitle:@"我的" normalImageName:@"我的png" selectedImageName:@"我的dpng"];
     
-    UIImage *image3 =[[UIImage imageNamed:@"我的dpng"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UITabBarItem *item3 =[[UITabBarItem alloc]initWithTitle:@"我的" image:[[UIImage imageNamed:@"我的png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:image3];
-    meNavigation.tabBarItem =item3;
-    [item3 setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorFromHexRGB:@"333333"],NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-    [item3 setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorFromHexRGB:@"f23030"],NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
-    [self addChildViewController:meNavigation];
-        
-    [self setValue:tabBar forKey:@"tabBar"];
+    
     
     _images = @[@"tab_recent_nor.png", @"tab_buddy_nor.png", @"tab_qworld_nor.png"];
     
@@ -97,6 +64,22 @@
     [[SkinManager shareSkinManager] addObserver:self forKeyPath:@"currentSkin" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:nil];
     
 }
+
+#pragma mark - 添加某个 childViewController
+- (void)addChildVC:(UIViewController *)vc tabBarItemTitle:(NSString *)tabBartitle navigationItemTitle:(NSString *)navigationTitle normalImageName:(NSString *)normalNamed selectedImageName:(NSString *)selecteName{
+     MyNavigationViewController *navigation = [[MyNavigationViewController alloc] initWithRootViewController:vc];
+    UIImage *selectedImage =[[UIImage imageNamed:selecteName]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UITabBarItem *item =[[UITabBarItem alloc]initWithTitle:tabBartitle image:[[UIImage imageNamed:normalNamed]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:selectedImage];
+    navigation.tabBarItem = item;
+    //字体的正常颜色
+    [item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor],NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+    //字体的选中颜色
+    [item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    
+    vc.navigationItem.title = navigationTitle;
+    [self addChildViewController:navigation];
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     NSString *currentSkin = change[@"new"];
     
