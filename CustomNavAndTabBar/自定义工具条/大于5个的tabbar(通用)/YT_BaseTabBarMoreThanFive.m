@@ -9,6 +9,10 @@
 #import "YT_BaseTabBarMoreThanFive.h"
 #import "YTBaseNavigationController.h"
 #import "YT_CustomTabBarView.h"
+
+#import "HomeViewController.h"
+#import "ShopCarViewController.h"
+#import "MeViewController.h"
 @interface YT_BaseTabBarMoreThanFive ()<YT_CustomTabBarViewDelegate>
 @property (nonatomic, strong) YT_CustomTabBarView *customTabBar;
 @end
@@ -46,30 +50,26 @@
 #pragma mark - 添加全部的 childViewcontroller(常用的)
 - (void)addAllChildViewController
 {
-    UIViewController *homeVC = [[UIViewController alloc] init];
-    homeVC.view.backgroundColor = [UIColor redColor];
+    HomeViewController *homeVC = [[HomeViewController alloc] init];
     [self addChildVC:homeVC title:@"首页" normalImageName:@"首页png" andSelectedImageName:@"首页dpng"];
     
-    UIViewController *activityVC = [[UIViewController alloc] init];
-    activityVC.view.backgroundColor = [UIColor yellowColor];
+    ShopCarViewController *activityVC = [[ShopCarViewController alloc] init];
     [self addChildVC:activityVC title:@"活动" normalImageName:@"购物车png" andSelectedImageName:@"购物车dpng"];
     
-    UIViewController *findVC = [[UIViewController alloc] init];
-    findVC.view.backgroundColor = [UIColor blueColor];
+    MeViewController *findVC = [[MeViewController alloc] init];
     [self addChildVC:findVC title:@"列表" normalImageName:@"我的png" andSelectedImageName:@"我的dpng"];
     
     
-    UIViewController *homeVC2 = [[UIViewController alloc] init];
+    HomeViewController *homeVC2 = [[HomeViewController alloc] init];
     homeVC2.view.backgroundColor = [UIColor redColor];
     [self addChildVC:homeVC2 title:@"首页" normalImageName:@"首页png" andSelectedImageName:@"首页dpng"];
     
-    UIViewController *activityVC2 = [[UIViewController alloc] init];
+    ShopCarViewController *activityVC2 = [[ShopCarViewController alloc] init];
     activityVC2.view.backgroundColor = [UIColor yellowColor];
     [self addChildVC:activityVC2 title:@"活动" normalImageName:@"购物车png" andSelectedImageName:@"购物车dpng"];
     
-//    UIViewController *findVC2 = [[UIViewController alloc] init];
-//    findVC2.view.backgroundColor = [UIColor blueColor];
-//    [self addChildVC:findVC2 title:@"列表" normalImageName:@"我的png" andSelectedImageName:@"我的dpng"];
+    MeViewController *findVC2 = [[MeViewController alloc] init];
+    [self addChildVC:findVC2 title:@"列表" normalImageName:@"我的png" andSelectedImageName:@"我的dpng"];
 }
 #pragma mark - 添加某个 childViewController
 - (void)addChildVC:(UIViewController *)vc title:(NSString *)title normalImageName:(NSString *)normalNamed andSelectedImageName:(NSString *)selecteName
