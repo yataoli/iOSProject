@@ -21,8 +21,4 @@
  */
 - (UIImage *)fixOrientation;
 
-/**
- *  按比例缩小图片
- */
-- (CGSize)fixSizeWithImageSize:(CGSize)size rate:(NSInteger)rate;
 @end

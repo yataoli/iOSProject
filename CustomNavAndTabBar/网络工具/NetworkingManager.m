@@ -293,28 +293,12 @@
         string = [NSString stringWithFormat:@"%@",[dict objectForKey:key]];
     }
     
-    if (string == nil || [self isBlankStringWithString:string]) {
+    if (string == nil || [self isBlankStringWithStr:string]) {
         string = @"";
     }
     
     return string;
 }
-- (BOOL)isBlankStringWithString:(NSString *)str{
-    if (str == NULL || [str isEqual:nil] || [str isEqual:Nil] || str == nil)
-        return  YES;
-    if ([str isEqual:[NSNull null]])
-        return  YES;
-    if (![str isKindOfClass:[NSString class]] )
-        return  YES;
-    if (0 == [str length] || 0 == [[str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length])
-        return  YES;
-    if([str isEqualToString:@"(null)"])
-        return  YES;
-    if([str isEqualToString:@"<null>"])
-        return  YES;
-    return NO;
-}
-
 #pragma mark - 检查网络是否授权
 
 - (void)checkNetWorkAuthor{

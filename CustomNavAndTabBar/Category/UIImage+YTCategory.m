@@ -9,31 +9,7 @@
 #import "UIImage+YTCategory.h"
 
 @implementation UIImage (YTCategory)
-- (CGSize)fixSizeWithImageSize:(CGSize)size rate:(NSInteger)rate
-{
-    CGFloat photoWidth = size.width;
-    
-    CGFloat aspectRatio = size.width / size.height;
-    CGFloat multiple = [UIScreen mainScreen].scale;
-    CGFloat pixelWidth = photoWidth * multiple / rate;
-    
-    if (iPhone5 || iPhone4S) {
-        if (pixelWidth > iPhone5preferredMaxWidth) {
-            pixelWidth = iPhone5preferredMaxWidth;
-        }
-    } else if (iPhone6s) {
-        if (pixelWidth > iPhone6spreferredMaxWidth) {
-            pixelWidth = iPhone6spreferredMaxWidth;
-        }
-    } else if (iPhone6SP) {
-        if (pixelWidth > iPhone6sPluspreferredMaxWidth) {
-            pixelWidth = iPhone6sPluspreferredMaxWidth;
-        }
-    }
-    CGFloat pixelHeight = pixelWidth / aspectRatio;
-    
-    return CGSizeMake(pixelWidth, pixelHeight);
-}
+
 
 + (UIImage *)createImageWithColor:(UIColor*) color
 {

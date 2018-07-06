@@ -22,6 +22,7 @@
 		179BCD8120B00A9D0031742D /* Fangsong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD7E20B00A9D0031742D /* Fangsong.ttf */; };
 		179BCD8220B00A9D0031742D /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD7F20B00A9D0031742D /* Kaiti.ttf */; };
 		179BCD8320B00A9D0031742D /* Zapfino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD8020B00A9D0031742D /* Zapfino.ttf */; };
+		17A9C5C120EF494400BB3C04 /* UIImage+YTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A9C5BF20EF494300BB3C04 /* UIImage+YTCategory.m */; };
 		17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */; };
 		17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C117FE202C1D7300C4629B /* MJRefreshAutoFooter.m */; };
 		17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C11800202C1D7300C4629B /* MJRefreshBackFooter.m */; };
@@ -221,6 +222,8 @@
 		179BCD7E20B00A9D0031742D /* Fangsong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fangsong.ttf; sourceTree = "<group>"; };
 		179BCD7F20B00A9D0031742D /* Kaiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kaiti.ttf; sourceTree = "<group>"; };
 		179BCD8020B00A9D0031742D /* Zapfino.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zapfino.ttf; sourceTree = "<group>"; };
+		17A9C5BF20EF494300BB3C04 /* UIImage+YTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YTCategory.m"; sourceTree = "<group>"; };
+		17A9C5C020EF494300BB3C04 /* UIImage+YTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YTCategory.h"; sourceTree = "<group>"; };
 		17BFB6E3203EA5B000FD395C /* YT_CenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_CenterButton.h; sourceTree = "<group>"; };
 		17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_CenterButton.m; sourceTree = "<group>"; };
 		17C117FD202C1D7300C4629B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -1210,6 +1213,8 @@
 		A024762420A446A300AFCC36 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				17A9C5C020EF494300BB3C04 /* UIImage+YTCategory.h */,
+				17A9C5BF20EF494300BB3C04 /* UIImage+YTCategory.m */,
 				A093064E20AD521D00820F51 /* YT_Device.h */,
 				A093064D20AD521D00820F51 /* YT_Device.m */,
 				A024762520A446A300AFCC36 /* NSString+Category.h */,
@@ -1536,6 +1541,7 @@
 				17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */,
 				8A4525EA1F5CE956004EB874 /* LoginView.m in Sources */,
 				A00BFF7320EB0F610089233D /* GaoFangTouTiaoMainController.m in Sources */,
+				17A9C5C120EF494400BB3C04 /* UIImage+YTCategory.m in Sources */,
 				8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */,
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
 				17F76D772064EFB50021722C /* YT_H5ViewController.m in Sources */,
