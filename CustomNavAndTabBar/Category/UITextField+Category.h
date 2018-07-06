@@ -5,6 +5,24 @@
 //  Created by suge on 2017/6/5.
 //  Copyright © 2017年 素格. All rights reserved.
 //
+/* 自动换行方法
+     - (void)textViewDidChange:(UITextView *)textView{
+ 
+     CGRect frame = textView.frame;
+     CGFloat textViewHeight = textView.contentSize.height;
+     if (textViewHeight >= 80) {
+     textViewHeight = 80;
+     }else{
+     if (textViewHeight <= 50){
+     textViewHeight = 50;
+     }
+     }
+     frame.size.height = textViewHeight;
+ 
+     textView.frame = frame;
+ 
+     }
+*/
 
 #import <UIKit/UIKit.h>
 
