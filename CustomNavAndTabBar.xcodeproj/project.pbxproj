@@ -149,7 +149,7 @@
 		A00B00B720EDB8930089233D /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00B420EDB8930089233D /* MyNavigationViewController.m */; };
 		A00B00BB20EDBA890089233D /* YTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00BA20EDBA890089233D /* YTBaseNavigationController.m */; };
 		A00B00BE20EDBAED0089233D /* YTBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00BD20EDBAED0089233D /* YTBaseTabBarController.m */; };
-		A00B00C220EDBEBA0089233D /* YT_BaseTabBarMoreThanFive.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00C020EDBEBA0089233D /* YT_BaseTabBarMoreThanFive.m */; };
+		A00B00C220EDBEBA0089233D /* YT_BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00C020EDBEBA0089233D /* YT_BaseTabBarController.m */; };
 		A00B00C720EDBED20089233D /* YT_CustomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00C520EDBED20089233D /* YT_CustomTabBarButton.m */; };
 		A00B00C820EDBED20089233D /* YT_CustomTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00B00C620EDBED20089233D /* YT_CustomTabBarView.m */; };
 		A00BFF7320EB0F610089233D /* GaoFangTouTiaoMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00BFF7220EB0F610089233D /* GaoFangTouTiaoMainController.m */; };
@@ -409,8 +409,8 @@
 		A00B00BA20EDBA890089233D /* YTBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTBaseNavigationController.m; sourceTree = "<group>"; };
 		A00B00BC20EDBAED0089233D /* YTBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTBaseTabBarController.h; sourceTree = "<group>"; };
 		A00B00BD20EDBAED0089233D /* YTBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTBaseTabBarController.m; sourceTree = "<group>"; };
-		A00B00C020EDBEBA0089233D /* YT_BaseTabBarMoreThanFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_BaseTabBarMoreThanFive.m; sourceTree = "<group>"; };
-		A00B00C120EDBEBA0089233D /* YT_BaseTabBarMoreThanFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_BaseTabBarMoreThanFive.h; sourceTree = "<group>"; };
+		A00B00C020EDBEBA0089233D /* YT_BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_BaseTabBarController.m; sourceTree = "<group>"; };
+		A00B00C120EDBEBA0089233D /* YT_BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_BaseTabBarController.h; sourceTree = "<group>"; };
 		A00B00C320EDBED10089233D /* YT_CustomTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_CustomTabBarButton.h; sourceTree = "<group>"; };
 		A00B00C420EDBED20089233D /* YT_CustomTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_CustomTabBarView.h; sourceTree = "<group>"; };
 		A00B00C520EDBED20089233D /* YT_CustomTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_CustomTabBarButton.m; sourceTree = "<group>"; };
@@ -1106,8 +1106,8 @@
 				A00B00C520EDBED20089233D /* YT_CustomTabBarButton.m */,
 				A00B00C420EDBED20089233D /* YT_CustomTabBarView.h */,
 				A00B00C620EDBED20089233D /* YT_CustomTabBarView.m */,
-				A00B00C120EDBEBA0089233D /* YT_BaseTabBarMoreThanFive.h */,
-				A00B00C020EDBEBA0089233D /* YT_BaseTabBarMoreThanFive.m */,
+				A00B00C120EDBEBA0089233D /* YT_BaseTabBarController.h */,
+				A00B00C020EDBEBA0089233D /* YT_BaseTabBarController.m */,
 			);
 			path = "大于5个的tabbar(通用)";
 			sourceTree = "<group>";
@@ -1525,7 +1525,7 @@
 				A024763320A446A300AFCC36 /* UIColor+HexRGB.m in Sources */,
 				17ED62CE207F4C750051B25F /* Reachability.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
-				A00B00C220EDBEBA0089233D /* YT_BaseTabBarMoreThanFive.m in Sources */,
+				A00B00C220EDBEBA0089233D /* YT_BaseTabBarController.m in Sources */,
 				A024762F20A446A300AFCC36 /* UIButton+Category.m in Sources */,
 				179BCD3220AFC4B50031742D /* DXPopover.m in Sources */,
 				17C11830202C1D7400C4629B /* MJRefreshAutoNormalFooter.m in Sources */,

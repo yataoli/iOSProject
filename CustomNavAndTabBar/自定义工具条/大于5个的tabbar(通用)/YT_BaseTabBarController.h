@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YT_BaseTabBarMoreThanFive : UITabBarController
+@interface YT_BaseTabBarController : UITabBarController
 
 @end

@@ -16,7 +16,7 @@
 
 #import "YTBaseTabBarController.h"
 
-#import "YT_BaseTabBarMoreThanFive.h"
+#import "YT_BaseTabBarController.h"
 @interface AppDelegate ()<UITabBarControllerDelegate,YT_GuidePageViewControllerDelegate,YTNetWorkStateMonitorDelegate>
 
 @end
@@ -86,7 +86,7 @@
     
     
     
-    YT_BaseTabBarMoreThanFive *baseBar = [[YT_BaseTabBarMoreThanFive alloc] init];
+    YT_BaseTabBarController *baseBar = [[YT_BaseTabBarController alloc] init];
     self.window.rootViewController = baseBar;
     
 

@@ -6,18 +6,18 @@
 //  Copyright © 2018年 zy. All rights reserved.
 //
 
-#import "YT_BaseTabBarMoreThanFive.h"
+#import "YT_BaseTabBarController.h"
 #import "YTBaseNavigationController.h"
 #import "YT_CustomTabBarView.h"
 
 #import "HomeViewController.h"
 #import "ShopCarViewController.h"
 #import "MeViewController.h"
-@interface YT_BaseTabBarMoreThanFive ()<YT_CustomTabBarViewDelegate>
+@interface YT_BaseTabBarController ()<YT_CustomTabBarViewDelegate>
 @property (nonatomic, strong) YT_CustomTabBarView *customTabBar;
 @end
 
-@implementation YT_BaseTabBarMoreThanFive
+@implementation YT_BaseTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
