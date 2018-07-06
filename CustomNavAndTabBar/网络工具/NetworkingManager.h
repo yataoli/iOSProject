@@ -49,8 +49,11 @@ typedef void(^HttpRequetSuccess)(id responseObject);
 /**请求失败回调block*/
 typedef void(^HttpRequesError)(NSError *error);
 
+///**返回响应头信息*/
+//typedef void(^URLSessionDataTask)(NSURLSessionDataTask *task);
+
 /**返回响应头信息*/
-typedef void(^URLSessionDataTask)(NSURLSessionDataTask *task);
+typedef void(^HTTPURLResponse)(NSHTTPURLResponse *response);
 
 
 
@@ -82,15 +85,8 @@ typedef void(^URLSessionDataTask)(NSURLSessionDataTask *task);
 @property (nonatomic,assign) NSTimeInterval timeoutInterval;
 
 
-+ (NSURLSessionDataTask *)GET:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask;
-+ (NSURLSessionDataTask *)POST:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask;
-/**
- * 开始网络状态监听
- */
-- (void)startNetworkMonitoring;
-/**
- * 检查网络是否授权
- */
-- (void)checkNetWorkAuthor;
++ (NSURLSessionDataTask *)GET:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock responeseContent:(HTTPURLResponse)responese;
++ (NSURLSessionDataTask *)POST:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock responeseContent:(HTTPURLResponse)responese;
+
 
 @end

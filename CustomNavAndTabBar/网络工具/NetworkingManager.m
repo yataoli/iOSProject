@@ -42,7 +42,6 @@
     
     // 配置自建证书的Https请求
     [self ba_setupSecurityPolicy];
-    [[NetworkingManager shareManager] startNetworkMonitoring];
 }
 
 
@@ -165,7 +164,7 @@
     [NetworkingManager shareManager].sessionManager.requestSerializer.timeoutInterval = _timeoutInterval;
 }
 #pragma mark - GET 请求方式
-+ (NSURLSessionDataTask *)GET:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask{
++ (NSURLSessionDataTask *)GET:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock responeseContent:(HTTPURLResponse)responese{
     __weak typeof(self) weakSelf = self;
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     if (responseType == 1){
@@ -178,8 +177,9 @@
         if (success){
             success(responseObject);
         }
-        if (dataTask) {
-            dataTask(task);
+        if (responese) {
+            NSHTTPURLResponse *tempResponse = (NSHTTPURLResponse *)task.response;
+            responese(tempResponse);
         }
         
         
@@ -189,14 +189,15 @@
         {
             errorBlock(error);
         }
-        if (dataTask) {
-            dataTask(task);
+        if (responese) {
+            NSHTTPURLResponse *tempResponse = (NSHTTPURLResponse *)task.response;
+            responese(tempResponse);
         }
     }];
     return task;
 }
 #pragma mark - POST 请求方式
-+ (NSURLSessionDataTask *)POST:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask{
++ (NSURLSessionDataTask *)POST:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock responeseContent:(HTTPURLResponse)responese{
     __weak typeof(self) weakSelf = self;
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     if (responseType == 1){
@@ -211,8 +212,9 @@
         if (success){
             success(responseObject);
         }
-        if (dataTask) {
-            dataTask(task);
+        if (responese) {
+            NSHTTPURLResponse *tempResponse = (NSHTTPURLResponse *)task.response;
+            responese(tempResponse);
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -220,8 +222,9 @@
         if (errorBlock){
             errorBlock(error);
         }
-        if (dataTask) {
-            dataTask(task);
+        if (responese) {
+            NSHTTPURLResponse *tempResponse = (NSHTTPURLResponse *)task.response;
+            responese(tempResponse);
         }
         
     }];
@@ -239,123 +242,5 @@
 + (void)clearnCookie{
     [NetworkingManager shareManager].sessionManager.requestSerializer.HTTPShouldHandleCookies = NO;
 }
-#pragma mark - 添加网络监听
-- (void)startNetworkMonitoring{
-    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
-    [NetworkingManager shareManager].networkStatus = manager.networkReachabilityStatus;
-    [manager startMonitoring];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkingStatusDidChanged:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
-}
-- (void)networkingStatusDidChanged:(NSNotification*)info{
-    NSDictionary *inforDict = [info userInfo];
-    NSString *statusStr = [self getStringFromDict:inforDict withKey:AFNetworkingReachabilityNotificationStatusItem];
-    if (statusStr == nil || [self isBlankStringWithStr:statusStr]) {
-        statusStr = [self getStringFromDict:inforDict withKey:@"LCNetworkingReachabilityNotificationStatusItem"];
-    }
-    
-    NSInteger status   = [statusStr integerValue];
-    if (status == [NetworkingManager shareManager].networkStatus) {
-        return;
-    }
-    
-    [NetworkingManager shareManager].networkStatus = status;
-    
-    if (status == AFNetworkReachabilityStatusNotReachable || status == AFNetworkReachabilityStatusUnknown) {
-        //没有网络
-        [self checkNetWorkAuthor];
-    }else{
-        //有网络
-        
-    }
-}
-#pragma mark - 判断字符串是否为空
-- (BOOL)isBlankStringWithStr:(NSString *)string{
-    if (string == NULL || [string isEqual:nil] || [string isEqual:Nil] || string == nil)
-        return  YES;
-    if ([string isEqual:[NSNull null]])
-        return  YES;
-    if (![string isKindOfClass:[NSString class]] )
-        return  YES;
-    if (0 == [string length] || 0 == [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length])
-        return  YES;
-    if([string isEqualToString:@"(null)"])
-        return  YES;
-    if([string isEqualToString:@"<null>"])
-        return  YES;
-    return NO;
-}
-
-- (NSString *)getStringFromDict:(NSDictionary*)dict withKey:(id)key{
-    
-    NSString *string = @"";
-    if (dict && [dict objectForKey:key]) {
-        string = [NSString stringWithFormat:@"%@",[dict objectForKey:key]];
-    }
-    
-    if (string == nil || [self isBlankStringWithStr:string]) {
-        string = @"";
-    }
-    
-    return string;
-}
-#pragma mark - 检查网络是否授权
-
-- (void)checkNetWorkAuthor{
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
-        CTCellularData *cellularData = [[CTCellularData alloc] init];
-        cellularData.cellularDataRestrictionDidUpdateNotifier = ^(CTCellularDataRestrictedState state) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *str1 = @"WiFi或蜂窝网络已经断开";
-                NSString *str2 = @"\n请检查您的网络设置";
-                NSString *str3 = @"";
-                NSString *str4 = @"";
-                if (cellularData.restrictedState == kCTCellularDataRestricted) {
-                    str1 = @"系统已为此应用关闭无线局域网";
-                    str2 = @"\n您可以在“";
-                    str3 = @"设置";
-                    str4 = @"”中为此应用打开无线局域网";
-                }
-                
-                NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-                [style setAlignment:NSTextAlignmentCenter];
-                [style setLineSpacing:4];
-                NSDictionary *dict1 = @{NSForegroundColorAttributeName:[UIColor lightGrayColor],
-                                        NSFontAttributeName:[UIFont systemFontOfSize:17],
-                                        NSParagraphStyleAttributeName:style};
-                NSAttributedString *string1 = [[NSAttributedString alloc] initWithString:str1 attributes:dict1];
-                
-                NSDictionary *dict2 = @{NSForegroundColorAttributeName:[UIColor blueColor],
-                                        NSFontAttributeName:[UIFont systemFontOfSize:14],
-                                        NSParagraphStyleAttributeName:style};
-                NSAttributedString *string2 = [[NSAttributedString alloc] initWithString:str2 attributes:dict2];
-                NSAttributedString *string4 = [[NSAttributedString alloc] initWithString:str4 attributes:dict2];
-                
-                NSDictionary *dict3 = @{NSForegroundColorAttributeName:[UIColor blueColor],
-                                        NSFontAttributeName:[UIFont systemFontOfSize:14],
-                                        NSParagraphStyleAttributeName:style};
-                NSAttributedString *string3 = [[NSAttributedString alloc] initWithString:str3 attributes:dict3];
-                
-                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] init];
-                [string appendAttributedString:string1];
-                [string appendAttributedString:string2];
-                [string appendAttributedString:string3];
-                [string appendAttributedString:string4];
-                
-                NSString *messageStr  = [NSString stringWithFormat:@"%@%@%@%@",str1,str2,str3,str4];
-                
-                UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:nil message:messageStr delegate:nil cancelButtonTitle:nil otherButtonTitles:@"好的", nil];
-                [alerView show];
-                
-            });
-        };
-    }else{
-        UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:nil message:@"请检查您的网络" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"好的", nil];
-        [alerView show];
-    }
-    
-}
-
-
 
 @end
