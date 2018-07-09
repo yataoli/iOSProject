@@ -21,7 +21,7 @@
     //设置导航栏上左右按钮的颜色
     self.navigationBar.tintColor = [UIColor redColor];
     
-    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
     //替换系统的返回按钮图片
     UIImage *image = [UIImage imageNamed:@"backArrow"];
     [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

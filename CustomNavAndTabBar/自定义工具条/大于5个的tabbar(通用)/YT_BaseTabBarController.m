@@ -51,49 +51,50 @@
 - (void)addAllChildViewController
 {
     HomeViewController *homeVC = [[HomeViewController alloc] init];
-    [self addChildVC:homeVC title:@"首页" normalImageName:@"首页png" andSelectedImageName:@"首页dpng"];
+    [self addChildVC:homeVC tabBarTitle:@"首页" navigationTitle:@"上边名字" normalImageName:@"首页png" andSelectedImageName:@"首页dpng"];
     
     ShopCarViewController *activityVC = [[ShopCarViewController alloc] init];
-    [self addChildVC:activityVC title:@"活动" normalImageName:@"购物车png" andSelectedImageName:@"购物车dpng"];
+    [self addChildVC:activityVC tabBarTitle:@"活动" navigationTitle:@"上边名字" normalImageName:@"购物车png" andSelectedImageName:@"购物车dpng"];
     
     MeViewController *findVC = [[MeViewController alloc] init];
-    [self addChildVC:findVC title:@"列表" normalImageName:@"我的png" andSelectedImageName:@"我的dpng"];
+    [self addChildVC:findVC tabBarTitle:@"列表" navigationTitle:@"上边名字" normalImageName:@"我的png" andSelectedImageName:@"我的dpng"];
     
     
     HomeViewController *homeVC2 = [[HomeViewController alloc] init];
     homeVC2.view.backgroundColor = [UIColor redColor];
-    [self addChildVC:homeVC2 title:@"首页" normalImageName:@"首页png" andSelectedImageName:@"首页dpng"];
+    [self addChildVC:homeVC2 tabBarTitle:@"首页" navigationTitle:@"上边名字" normalImageName:@"首页png" andSelectedImageName:@"首页dpng"];
     
     ShopCarViewController *activityVC2 = [[ShopCarViewController alloc] init];
     activityVC2.view.backgroundColor = [UIColor yellowColor];
-    [self addChildVC:activityVC2 title:@"活动" normalImageName:@"购物车png" andSelectedImageName:@"购物车dpng"];
+    [self addChildVC:activityVC2 tabBarTitle:@"活动" navigationTitle:@"上边名字" normalImageName:@"购物车png" andSelectedImageName:@"购物车dpng"];
     
     MeViewController *findVC2 = [[MeViewController alloc] init];
-    [self addChildVC:findVC2 title:@"列表" normalImageName:@"我的png" andSelectedImageName:@"我的dpng"];
+    [self addChildVC:findVC2 tabBarTitle:@"列表" navigationTitle:@"上边名字" normalImageName:@"我的png" andSelectedImageName:@"我的dpng"];
 }
 #pragma mark - 添加某个 childViewController
-- (void)addChildVC:(UIViewController *)vc title:(NSString *)title normalImageName:(NSString *)normalNamed andSelectedImageName:(NSString *)selecteName
-{
-
-    vc.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:normalNamed];
-    UIImage *selectedImage = [UIImage imageNamed:selecteName];
-    vc.tabBarItem.selectedImage = selectedImage;
-    
-    
-    //选中颜色和正常颜色在  YT_CustomTabBarButton.m 里边设置
-    
-
-    YTBaseNavigationController *nav = [[YTBaseNavigationController alloc] initWithRootViewController:vc];
-    [self addChildViewController:nav];
-    
-    
-    
-    [self.customTabBar addTabBarButtonWithItem:vc.tabBarItem];
-    
-    
-
-}
+- (void)addChildVC:(UIViewController *)vc tabBarTitle:(NSString *)barTitle navigationTitle:(NSString *)naviTile normalImageName:(NSString *)normalNamed andSelectedImageName:(NSString *)selecteName
+    {
+        
+        vc.navigationItem.title = naviTile;
+        vc.tabBarItem.title = barTitle;
+        vc.tabBarItem.image = [UIImage imageNamed:normalNamed];
+        UIImage *selectedImage = [UIImage imageNamed:selecteName];
+        vc.tabBarItem.selectedImage = selectedImage;
+        
+        
+        //选中颜色和正常颜色在  YT_CustomTabBarButton.m 里边设置
+        
+        
+        YTBaseNavigationController *nav = [[YTBaseNavigationController alloc] initWithRootViewController:vc];
+        [self addChildViewController:nav];
+        
+        
+        
+        [self.customTabBar addTabBarButtonWithItem:vc.tabBarItem];
+        
+        
+        
+    }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
