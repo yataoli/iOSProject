@@ -66,10 +66,14 @@
  */
 + (NSString *)getTimeStringWithDate:(NSDate *)date andFormat:(NSString *)format;
 
-//把指定时间戳（秒）转化为指定格式 （yyyy-MM-dd HH:mm）
+/**
+ * 把指定时间戳（秒）转化为指定格式 （yyyy-MM-dd HH:mm）
+ */
 + (NSString *)getTime:(NSString *)getTimeStr withFormate:(NSString *)timeFormate;
-
-
+/**
+ * 把时间字符串 (yyyy-MM-dd HH:mm:ss) 转化为毫秒时间戳
+ */
++ (NSString *)getTimeIntervalWithTimeString:(NSString *)timeStr;
 /**获取设备型号*/
 + (NSString*)deviceVersion;
 

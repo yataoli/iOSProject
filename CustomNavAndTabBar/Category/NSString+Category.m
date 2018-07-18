@@ -322,4 +322,19 @@
     return NO;
 
 }
+/**
+ * 把时间字符串 (yyyy-MM-dd HH:mm:ss) 转化为毫秒时间戳
+ */
++ (NSString *)getTimeIntervalWithTimeString:(NSString *)timeStr{
+    //创建时间格式器，并设置时间格式
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    NSString *formaterStr = @"yyyy-MM-dd HH:mm:ss";
+    
+    formater.dateFormat = formaterStr;
+    
+    NSDate *houTaiDate = [formater dateFromString:timeStr];
+    
+    NSString *timeInterval = [NSString stringWithFormat:@"%@",@([houTaiDate timeIntervalSince1970] * 1000)];
+    return timeInterval;
+}
 @end
