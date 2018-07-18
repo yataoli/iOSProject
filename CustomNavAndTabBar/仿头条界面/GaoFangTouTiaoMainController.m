@@ -27,7 +27,8 @@
     
     [MBProgressHUD shouHUDWithStr:nil atView:self.view];
     NSString * url = [NSString stringWithFormat:@"http://admin.whjunqi.com:85/index.php/Home/Port/caizhong/user/yirenchat?r=%@",@(arc4random() % 100)];
-    [NetworkingManager GET:url responeseType:1 parameters:nil successBlock:^(id responseObject) {
+    
+    [YTNetworkingTool GET:url responeseType:1 parameters:nil success:^(id responseObject) {
         NSString * str = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSArray *tempArray = [str componentsSeparatedByString:@"^"];
         for (NSString *string in tempArray) {
@@ -38,11 +39,10 @@
         [MBProgressHUD hiddenHUD];
     } failure:^(NSError *error) {
         [MBProgressHUD hiddenHUD];
-    } sessionDataTask:^(NSURLSessionDataTask *task) {
-        NSHTTPURLResponse *respose = (NSHTTPURLResponse *)task.response;
-        NSLog(@"code == %ld \n %@",(long)respose.statusCode,respose.allHeaderFields);
-        
+    } responeseHeader:^(NSHTTPURLResponse *response) {
+        NSLog(@"code == %ld \n %@",(long)response.statusCode,response.allHeaderFields);
     }];
+    
     
 }
 - (void)customNav{

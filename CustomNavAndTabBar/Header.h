@@ -10,7 +10,6 @@
 #define Header_h
 #import "UIColor+HexRGB.h"
 #import "MBProgressHUD+MyExtension.h"
-#import "NetworkingManager.h"
 #import <Masonry.h>
 #import "UITextField+Category.h"
 #import "AESCipher/AESCipher.h"
@@ -18,6 +17,7 @@
 #import <JSONModel.h>
 #import "YTInfoView.h"
 #import "YT_CenterButton.h"
+#import "YTNetworkingTool.h"
 
 #define passwordKey @"?-oRb7wKsY^@>&sW"
 

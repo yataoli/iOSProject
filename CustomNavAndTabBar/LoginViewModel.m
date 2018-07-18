@@ -17,16 +17,17 @@
     NSString *jiaMiData = aesEncryptString(accountJsonString, passwordKey);
     
     NSDictionary *dic = @{@"account":jiaMiData } ;
-    [NetworkingManager POST:@"http://139.129.245.200:80/bulu/customer/login" responeseType:0 parameters:dic successBlock:^(id responseObject) {
+    [YTNetworkingTool POST:@"http://139.129.245.200:80/bulu/customer/login" responeseType:0 parameters:dic success:^(id responseObject) {
         if ([responseObject[@"status"] intValue] == 0) {
             MeMessageModel *model = [[MeMessageModel alloc] initWithDictionary:responseObject[@"data"] error:nil];
             [self.dataSource addObject:model];
         }
     } failure:^(NSError *error) {
         fail(error);
-    } sessionDataTask:^(NSURLSessionDataTask *task) {
+    } responeseHeader:^(NSHTTPURLResponse *response) {
         
     }];
+    
     
 }
 - (NSMutableArray *)dataSource{
