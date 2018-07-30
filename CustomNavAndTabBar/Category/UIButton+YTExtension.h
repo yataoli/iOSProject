@@ -12,7 +12,7 @@ typedef NS_ENUM(NSUInteger,ButtonState){
     ButtonStateNormal = 0,
     ButtonStateSelected,
 };
-@interface UIButton (Category)
+@interface UIButton (YTExtension)
 - (void)setBackgroundColor:(nullable UIColor *)color forState:(ButtonState)state;
 @end
 

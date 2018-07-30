@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger,CornerType){
 };
 
 
-@interface UIView (Extension)
+@interface UIView (YTExtension)
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
@@ -30,8 +30,16 @@ typedef NS_ENUM(NSInteger,CornerType){
 @property (nonatomic,assign,readonly) CGFloat maxX;
 @property (nonatomic,assign,readonly) CGFloat minX;
 
-/**圆角*/
+/**
+ *圆角
+ */
 - (void)conerWithType:(CornerType)type andRadius:(CGFloat)Radius;
-
-
+/**
+ * 添加单机事件
+ */
+- (void)addTapActionWithBlock:(void (^)(void))block;
+/**
+ * 添加长按事件
+ */
+- (void)addLongPressActionWithBlock:(void (^)(void))block;
 @end

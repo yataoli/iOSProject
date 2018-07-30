@@ -6,9 +6,9 @@
 //  Copyright © 2017年 素格. All rights reserved.
 //
 
-#import "UITextField+Category.h"
+#import "UITextField+YTExtension.h"
 
-@implementation UITextField (Category)
+@implementation UITextField (YTExtension)
 #pragma mark - 创建一个带左边站位view的textFeild
 + (UITextField *)createTextFieldWithLeftViewWidth:(CGFloat )width{
     UITextField *textField = [[UITextField alloc] init];

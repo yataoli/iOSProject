@@ -13,3 +13,28 @@
 #import "YT_MJRefreshFooter.h"
 #import "YT_MJRefreshAutoGifFooter.h"
 #endif /* YT_MJRefresh_h */
+
+
+/*
+ self.collectionView.mj_header = [YT_MJRefreshHeader headerWithRefreshingBlock:^{
+ NSLog(@"++++++");
+ 
+ }];
+ [self.collectionView.mj_header beginRefreshing];
+ 
+ self.collectionView.mj_footer = [YT_MJRefreshFooter footerWithRefreshingBlock:^{
+ NSLog(@"------");
+ 
+ }];
+ 
+self.collectionView.mj_header = [YT_MJRefreshGifHeader headerWithRefreshingBlock:^{
+    NSLog(@"----gif-----");
+ 
+}];
+
+
+self.collectionView.mj_footer = [YT_MJRefreshAutoGifFooter footerWithRefreshingBlock:^{
+    NSLog(@"++++gif++++");
+ 
+    }];
+ */

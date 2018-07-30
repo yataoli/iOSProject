@@ -6,8 +6,8 @@
 //  Copyright © 2018年 李亚涛. All rights reserved.
 //
 
-#import "UIButton+Category.h"
-@implementation UIButton (Category)
+#import "UIButton+YTExtension.h"
+@implementation UIButton (YTExtension)
 //设置按钮的不同状态的背景颜色  让程序根据颜色自动生成不同的纯色背景图片即可。
 - (void)setBackgroundColor:(nullable UIColor *)color forState:(ButtonState)state{
     if (state == 1) {

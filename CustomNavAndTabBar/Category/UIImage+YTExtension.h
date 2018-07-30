@@ -8,17 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (YTCategory)
+@interface UIImage (YTExtension)
 /**
  *  将颜色转换为图片
  */
 + (UIImage *)createImageWithColor:(UIColor*) color;
-
 
 /**
  *  修正上传服务器后,图片的显示方向
  *
  */
 - (UIImage *)fixOrientation;
+
+/**
+ * 裁剪圆形图片
+ */
+
 
 @end

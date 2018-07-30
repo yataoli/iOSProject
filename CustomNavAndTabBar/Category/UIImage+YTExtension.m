@@ -6,11 +6,11 @@
 //  Copyright © 2018年 郑州鹿客互联网科技有限公司. All rights reserved.
 //
 
-#import "UIImage+YTCategory.h"
+#import "UIImage+YTExtension.h"
 
-@implementation UIImage (YTCategory)
+@implementation UIImage (YTExtension)
 
-
+#pragma mark - 将颜色转换为图片
 + (UIImage *)createImageWithColor:(UIColor*) color
 {
     CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
@@ -22,7 +22,7 @@
     UIGraphicsEndImageContext();
     return theImage;
 }
-
+#pragma mark - 修正上传服务器后,图片的显示方向
 - (UIImage *)fixOrientation {
     if(self.imageOrientation == UIImageOrientationUp) return self;
     CGAffineTransform transform = CGAffineTransformIdentity;
@@ -79,4 +79,7 @@
     CGImageRelease(cgimg);
     return img;
 }
+#pragma mark - 裁剪圆形图片
+
+
 @end

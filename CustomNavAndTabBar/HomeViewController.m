@@ -10,7 +10,7 @@
 #import "CustomColletionView.h"
 #import "SaveAndReadFileAtSandbox.h"
 #import "YT_CheckVersionManager.h"
-#import "UIButton+Category.h"
+
 #define ScreenBounds [UIScreen mainScreen].bounds
 #define ScreenWidth ScreenBounds.size.width
 #define ScreenHeight ScreenBounds.size.height
@@ -30,25 +30,13 @@
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor redColor];
 //    [[YT_CheckVersionManager checkVersionManager] checkAppStoreVersionWithAPPID:@"1367104970"];
-    [self createUI];
-    /*
-    self.collectionView.mj_header = [YT_MJRefreshHeader headerWithRefreshingBlock:^{
-        NSLog(@"++++++");
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.collectionView.mj_header endRefreshing];
-            [self.collectionView.mj_footer endRefreshing];
-        });
-    }];
-    [self.collectionView.mj_header beginRefreshing];
     
-    self.collectionView.mj_footer = [YT_MJRefreshFooter footerWithRefreshingBlock:^{
-        NSLog(@"------");
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.collectionView.mj_header endRefreshing];
-            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
-        });
-    }];
-    */
+    NSString *str = @"字符串";
+    NSLog(@"%@",[str pinyin]);
+    NSLog(@"%@",[str pinyinInitial]);
+    
+    [self createUI];
+    
     self.collectionView.mj_header = [YT_MJRefreshGifHeader headerWithRefreshingBlock:^{
         NSLog(@"----gif-----");
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -68,15 +56,9 @@
         });
     }];
     
-    //按钮不同状态的背景颜色
-//    UIButton *buttonCode = [UIButton buttonWithType:UIButtonTypeCustom];
-//    buttonCode.frame = CGRectMake(100, 200, 100, 100);
-//    [buttonCode addTarget:self action:@selector(buttonCodeButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-//    [buttonCode setBackgroundColor:[UIColor redColor] forState:0];
-//    [buttonCode setBackgroundColor:[UIColor greenColor] forState:1];
-//    [self.view addSubview:buttonCode];
-//    [[NetworkingManager shareManager] checkNetWorkAuthor];
-//    [[NetworkingManager shareManager] startNetworkMonitoring];
+    NSDate *date = [NSDate date];
+    NSLog(@"--%@",@([date isToday]));
+    NSLog(@"--%@",@([date isThisYear]));
     
 }
 - (void)buttonCodeButtonClick:(UIButton *)button{

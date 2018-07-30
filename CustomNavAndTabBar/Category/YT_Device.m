@@ -21,7 +21,7 @@
 
 @implementation YT_Device
 
-//获取设备型号
+#pragma mark - 获取设备型号
 + (NSString*)getDeviceVersion{
     
     struct utsname systemInfo;
@@ -86,15 +86,11 @@
     if ([platform isEqualToString:@"x86_64"])    return @"iPhone Simulator";
     return platform;
 }
-/**
- *获取系统版本号
- */
+#pragma mark - 获取系统版本号
 + (NSString *)getSystemVersion{
     return [UIDevice currentDevice].systemVersion;
 }
-/**
- *获取设备电池容量，单位 mA 毫安
- */
+#pragma mark - 获取设备电池容量，单位 mA 毫安
 + (NSInteger)getBatteryCapacity {
     NSString *deviceVersion = [self getDeviceVersion];
    
@@ -174,9 +170,8 @@
         return 0;
     }
 }
-/**
- *获取设备IP地址
- */
+
+#pragma mark - 获取设备IP地址
 + (NSString *)getDeviceIPAddresses{
     
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -231,15 +226,13 @@
     }
     return deviceIP;
 }
-/**
- *获取设备名字
- */
+
+#pragma mark - 获取设备名字
 + (NSString *)getDeviceName{
     return [UIDevice currentDevice].name;
 }
-/**
- *获取磁盘总空间 
- */
+
+#pragma mark - 获取磁盘总空间
 + (double)getTotalDiskSpace{
     NSError *error = nil;
     NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
@@ -249,9 +242,8 @@
     
     return space/1024/1024/1024.0;
 }
-/**
- 获取磁盘已使用空间
- */
+
+#pragma mark - 获取磁盘已使用空间
 + (double)getUsedDiskSpace{
     double totalDisk = [self getTotalDiskSpace];
     double freeDisk = [self getFreeDiskSpace];
@@ -269,17 +261,14 @@
     if (space < 0) space = -1.0;
     return space/1024/1024/1024.0;
 }
-/**
- 获取总内存空间
- */
+
+#pragma mark - 获取总内存空间
 + (double)getTotalMemory{
     int64_t totalMemory = [[NSProcessInfo processInfo] physicalMemory];
     if (totalMemory < -1) totalMemory = -1.0;
     return totalMemory/1024/1024/1024.0;
 }
-/**
- *获取空闲的内存空间
- */
+#pragma mark - 获取空闲的内存空间
 + (double)getFreeMemory{
     mach_port_t host_port = mach_host_self();
     mach_msg_type_number_t host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);
@@ -293,9 +282,8 @@
     if (kern != KERN_SUCCESS) return -1;
     return vm_stat.free_count * page_size /1024/1024/1024.0;
 }
-/**
- *获取正在使用的内存空间
- */
+
+#pragma mark - 获取正在使用的内存空间
 + (double)getUsedMemory{
     mach_port_t host_port = mach_host_self();
     mach_msg_type_number_t host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);

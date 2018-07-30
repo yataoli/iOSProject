@@ -26,7 +26,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITextField (Category)
+@interface UITextField (YTExtension)
 /**
  *创建一个带左边站位view的textFeild
  */
