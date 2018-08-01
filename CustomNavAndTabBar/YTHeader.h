@@ -76,6 +76,8 @@
 // 配置视图安全区域范围
 #define YT_ViewSafeAreInsets(view) ({UIEdgeInsets insets; if(@available(iOS 11.0, *)) {insets = view.safeAreaInsets;} else {insets = UIEdgeInsetsZero;} insets;})
 
+// alert提示框
+#define YT_Alert(_title_,_message_) UIAlertView* alert = [[UIAlertView alloc] initWithTitle:_title_ message:_message_ delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];[alert show];
 
 
 #endif /* YTHeader_h */
