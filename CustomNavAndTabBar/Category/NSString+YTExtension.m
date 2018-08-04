@@ -45,7 +45,7 @@
     NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
      return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
 }
-/**正则匹配手机号码*/
+#pragma mark - 正则匹配手机号码
 - (BOOL)checkTelNumber
 {
     NSString *pattern = @"^((13[0-9])|(15[^4,\\D])|(17[0-9])|(18[0,0-9]))\\d{8}$";
@@ -54,7 +54,7 @@
     return isMatch;
 }
 
-/**检查 密码是否是 6-20 数字密码*/
+#pragma mark - 检查 密码是否是 6-20 数字密码
 - (BOOL)checkPassWord
 {
     NSString *pattern = @"^[0-9A-Za-z]{6,20}$";
@@ -63,7 +63,7 @@
     return isMatch;
 }
 
-/**正则匹配用户身份证号 15 或 18 位*/
+#pragma mark - 正则匹配用户身份证号 15 或 18 位
 - (BOOL)checkUserIdCard{
     NSString *pattern = @"(^[0-9]{15}$)|([0-9]{17}([0-9]|X)$)";
     NSPredicate *pred = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", pattern];
@@ -92,7 +92,7 @@
     BOOL isMatch = [pred evaluateWithObject:self];
     return isMatch;
 }
-//  判断字符串是否为空
+#pragma mark - 判断字符串是否为空
 - (BOOL)isBlankString{
     if (self == NULL || [self isEqual:nil] || [self isEqual:Nil] || self == nil)
         return  YES;
@@ -142,5 +142,37 @@
         [initial appendString:[str substringToIndex:1]];
     }
     return initial;
+}
+#pragma mark - 判断手机号码运营商
+- (NSString *)telNumberType{
+    /**
+     * 中国移动：China Mobile
+     * 134,135,136,137,138,139,150,151,152,157,158,159,182,183,184,187,188,147,178,1705
+     */
+    NSString *CM = @"(^1(3[4-9]|4[7]|5[0-27-9]|7[8]|8[2-478])\\d{8}$)|(^1705\\d{7}$)";
+    if ([[NSPredicate predicateWithFormat: @"SELF MATCHES %@", CM] evaluateWithObject:self]) {
+        return @"中国联通";
+    }
+    
+    /**
+     * 中国联通：China Unicom
+     * 130,131,132,155,156,185,186,145,176,1709
+     */
+    NSString *CU = @"(^1(3[0-2]|4[5]|5[56]|7[6]|8[56])\\d{8}$)|(^1709\\d{7}$)";
+    if ([[NSPredicate predicateWithFormat: @"SELF MATCHES %@", CU] evaluateWithObject:self]) {
+        return @"中国联通";
+    }
+    
+    /**
+     * 中国电信：China Telecom
+     * 133,153,180,181,189,177,1700
+     */
+    NSString *CT = @"(^1(33|53|77|8[019])\\d{8}$)|(^1700\\d{7}$)";
+    if ([[NSPredicate predicateWithFormat: @"SELF MATCHES %@", CT] evaluateWithObject:self]) {
+        return @"中国电信";
+    }
+    
+    return @"";
+    
 }
 @end

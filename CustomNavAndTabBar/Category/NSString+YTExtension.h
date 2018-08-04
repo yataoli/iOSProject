@@ -35,6 +35,11 @@
 - (BOOL)checkTelNumber;
 
 /**
+ * 判断手机号码运营商
+ */
+- (NSString *)telNumberType;
+
+/**
  *  检查 密码是否是 6-20 数字密码
  */
 - (BOOL)checkPassWord;

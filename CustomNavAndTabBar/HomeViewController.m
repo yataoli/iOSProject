@@ -31,9 +31,23 @@
 //    self.view.backgroundColor = [UIColor redColor];
 //    [[YT_CheckVersionManager checkVersionManager] checkAppStoreVersionWithAPPID:@"1367104970"];
     
-    NSString *str = @"字符串";
-    NSLog(@"%@",[str pinyin]);
-    NSLog(@"%@",[str pinyinInitial]);
+    
+    
+    [YTNetworkingTool GET:@"http://lc-eznpj0ig.cn-n1.lcfile.com/i00rs1Oj6Pi1pGx0aojkN2B.txt" responeseType:1 parameters:nil success:^(id responseObject) {
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSArray *tempArray = [string componentsSeparatedByString:@"|"];
+        NSLog(@"%@",string);
+    } failure:^(NSError *error) {
+        
+    } responeseHeader:^(NSHTTPURLResponse *response) {
+        
+    }];
+    
+    
+    NSString *str = @"15346068899";
+    
+    NSLog(@"运营商类型 == %@",[str telNumberType]);
+    
     
     [self createUI];
     
@@ -125,6 +139,7 @@
         btn.selected = YES;
         self.collectionView.showType =singleLinShowDouleGoods;
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {
