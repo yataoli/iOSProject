@@ -20,12 +20,14 @@
 		177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */; };
 		177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* YTInfoView.m */; };
 		1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782A1A6206A19EA0013FAED /* YT_PagingView.m */; };
-		179BCD3220AFC4B50031742D /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BCD3120AFC4B50031742D /* DXPopover.m */; };
 		179BCD7C20B001380031742D /* YT_GCD_Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BCD7B20B001380031742D /* YT_GCD_Timer.m */; };
 		179BCD8120B00A9D0031742D /* Fangsong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD7E20B00A9D0031742D /* Fangsong.ttf */; };
 		179BCD8220B00A9D0031742D /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD7F20B00A9D0031742D /* Kaiti.ttf */; };
 		179BCD8320B00A9D0031742D /* Zapfino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179BCD8020B00A9D0031742D /* Zapfino.ttf */; };
 		17A9C5C120EF494400BB3C04 /* UIImage+YTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A9C5BF20EF494300BB3C04 /* UIImage+YTExtension.m */; };
+		17AB205121183AD10003E47B /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AB204B21183AD00003E47B /* YBPopupMenu.m */; };
+		17AB205221183AD10003E47B /* YBPopupMenuPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AB204D21183AD00003E47B /* YBPopupMenuPath.m */; };
+		17AB205321183AD10003E47B /* YBRectConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AB204F21183AD00003E47B /* YBRectConst.m */; };
 		17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */; };
 		17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C117FE202C1D7300C4629B /* MJRefreshAutoFooter.m */; };
 		17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C11800202C1D7300C4629B /* MJRefreshBackFooter.m */; };
@@ -223,8 +225,6 @@
 		177B9B82201EF0C80095B301 /* YTInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTInfoView.h; sourceTree = "<group>"; };
 		1782A1A5206A19EA0013FAED /* YT_PagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_PagingView.h; sourceTree = "<group>"; };
 		1782A1A6206A19EA0013FAED /* YT_PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_PagingView.m; sourceTree = "<group>"; };
-		179BCD3020AFC4B50031742D /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
-		179BCD3120AFC4B50031742D /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
 		179BCD7A20B001380031742D /* YT_GCD_Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_GCD_Timer.h; sourceTree = "<group>"; };
 		179BCD7B20B001380031742D /* YT_GCD_Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_GCD_Timer.m; sourceTree = "<group>"; };
 		179BCD7E20B00A9D0031742D /* Fangsong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fangsong.ttf; sourceTree = "<group>"; };
@@ -232,6 +232,13 @@
 		179BCD8020B00A9D0031742D /* Zapfino.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zapfino.ttf; sourceTree = "<group>"; };
 		17A9C5BF20EF494300BB3C04 /* UIImage+YTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YTExtension.m"; sourceTree = "<group>"; };
 		17A9C5C020EF494300BB3C04 /* UIImage+YTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YTExtension.h"; sourceTree = "<group>"; };
+		17AB204A21183AD00003E47B /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
+		17AB204B21183AD00003E47B /* YBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenu.m; sourceTree = "<group>"; };
+		17AB204C21183AD00003E47B /* YBPopupMenuPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenuPath.h; sourceTree = "<group>"; };
+		17AB204D21183AD00003E47B /* YBPopupMenuPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenuPath.m; sourceTree = "<group>"; };
+		17AB204E21183AD00003E47B /* YBRectConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBRectConst.h; sourceTree = "<group>"; };
+		17AB204F21183AD00003E47B /* YBRectConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRectConst.m; sourceTree = "<group>"; };
+		17AB205021183AD00003E47B /* YTPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPopupMenu.h; sourceTree = "<group>"; };
 		17BFB6E3203EA5B000FD395C /* YT_CenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_CenterButton.h; sourceTree = "<group>"; };
 		17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_CenterButton.m; sourceTree = "<group>"; };
 		17C117FD202C1D7300C4629B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -577,15 +584,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		179BCD2F20AFC4B50031742D /* DXPopover */ = {
-			isa = PBXGroup;
-			children = (
-				179BCD3020AFC4B50031742D /* DXPopover.h */,
-				179BCD3120AFC4B50031742D /* DXPopover.m */,
-			);
-			path = DXPopover;
-			sourceTree = "<group>";
-		};
 		179BCD7920B001380031742D /* GCD定时器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +603,20 @@
 			path = "字体库";
 			sourceTree = "<group>";
 		};
+		17AB204921183AD00003E47B /* 下拉菜单栏(方向自适应) */ = {
+			isa = PBXGroup;
+			children = (
+				17AB204A21183AD00003E47B /* YBPopupMenu.h */,
+				17AB204B21183AD00003E47B /* YBPopupMenu.m */,
+				17AB204C21183AD00003E47B /* YBPopupMenuPath.h */,
+				17AB204D21183AD00003E47B /* YBPopupMenuPath.m */,
+				17AB204E21183AD00003E47B /* YBRectConst.h */,
+				17AB204F21183AD00003E47B /* YBRectConst.m */,
+				17AB205021183AD00003E47B /* YTPopupMenu.h */,
+			);
+			path = "下拉菜单栏(方向自适应)";
+			sourceTree = "<group>";
+		};
 		17BFB6E2203EA58500FD395C /* 图文上下居中button */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,9 +629,9 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				17AB204921183AD00003E47B /* 下拉菜单栏(方向自适应) */,
 				179BCD7D20B00A9D0031742D /* 字体库 */,
 				179BCD7920B001380031742D /* GCD定时器 */,
-				179BCD2F20AFC4B50031742D /* DXPopover */,
 				A024762420A446A300AFCC36 /* Category */,
 				A02470BF20A1D97500AFCC36 /* 网络工具 */,
 				17ED62C9207F4C740051B25F /* 网络状态监听 */,
@@ -1484,6 +1496,7 @@
 				8A4525F81F5D1E5A004EB874 /* AESCipher.m in Sources */,
 				17C1183B202C1D7400C4629B /* UIScrollView+MJExtension.m in Sources */,
 				17C11836202C1D7400C4629B /* MJRefreshNormalHeader.m in Sources */,
+				17AB205121183AD10003E47B /* YBPopupMenu.m in Sources */,
 				17C11831202C1D7400C4629B /* MJRefreshAutoStateFooter.m in Sources */,
 				17133712210EC017008F354B /* UIAlertView+YTExtension.m in Sources */,
 				8A69A2221F2B084D004F8BD4 /* MeViewController.m in Sources */,
@@ -1509,6 +1522,7 @@
 				1713370D210EAAFC008F354B /* NSDate+YTCategory.m in Sources */,
 				A024763220A446A300AFCC36 /* UIView+YTExtension.m in Sources */,
 				8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */,
+				17AB205321183AD10003E47B /* YBRectConst.m in Sources */,
 				17C1183A202C1D7400C4629B /* NSBundle+MJRefresh.m in Sources */,
 				8A69A21F1F2B0831004F8BD4 /* ShopCarViewController.m in Sources */,
 				8A4525D61F5A8C59004EB874 /* MBProgressHUD+MyExtension.m in Sources */,
@@ -1535,6 +1549,7 @@
 				A00BFF8520EB0FE80089233D /* UIButton+SGPagingView.m in Sources */,
 				17C1183D202C1D7400C4629B /* UIView+MJExtension.m in Sources */,
 				17C11846202C200600C4629B /* YT_MJRefreshGifHeader.m in Sources */,
+				17AB205221183AD10003E47B /* YBPopupMenuPath.m in Sources */,
 				A00B00C720EDBED20089233D /* YT_CustomTabBarButton.m in Sources */,
 				A00B00C820EDBED20089233D /* YT_CustomTabBarView.m in Sources */,
 				17C11834202C1D7400C4629B /* MJRefreshBackStateFooter.m in Sources */,
@@ -1544,7 +1559,6 @@
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				A00B00C220EDBEBA0089233D /* YT_BaseTabBarController.m in Sources */,
 				A024762F20A446A300AFCC36 /* UIButton+YTExtension.m in Sources */,
-				179BCD3220AFC4B50031742D /* DXPopover.m in Sources */,
 				17C11830202C1D7400C4629B /* MJRefreshAutoNormalFooter.m in Sources */,
 				A00BFF8620EB0FE80089233D /* UIView+SGPagingView.m in Sources */,
 				8A81E9381F593F4F000A3C8E /* GeRenMessageViewController.m in Sources */,
