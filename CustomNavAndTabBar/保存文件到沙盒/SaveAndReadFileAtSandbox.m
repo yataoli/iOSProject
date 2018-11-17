@@ -22,7 +22,7 @@
     }
 }
 #pragma mark - 保存二进制数据到沙盒指定文件夹
-+ (void)saveDataToSandbox:(NSData *)data{
++ (void)saveDataToSandbox:(NSData *)data WithFilenName:(NSString *)fileName{
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSString *pathDocument = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filePath = [NSString stringWithFormat:@"%@/Sandbox",pathDocument];
@@ -32,7 +32,7 @@
     }else{
         NSLog(@"文件夹已经存在");
     }
-    NSString *datafilePath = [filePath stringByAppendingPathComponent:@"data.txt"];
+    NSString *datafilePath = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt",fileName]];
     BOOL isWriteSuccess = [data writeToFile:datafilePath atomically:YES];
     if (isWriteSuccess) {
         NSLog(@"写入成功");
@@ -42,12 +42,13 @@
     }
 }
 #pragma mark - 从沙盒指定文件夹读取二进制数据
-+ (NSData *)readDataFromSandbox{
++ (NSData *)readDataFromSandboxWithFilenName:(NSString *)fileName{
     
     NSString *pathDocument = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filePath = [NSString stringWithFormat:@"%@/Sandbox",pathDocument];
     NSError *error = nil;
-    NSData * data = [NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.txt",filePath,@"data"] options:NSUTF8StringEncoding error:&error];
+    NSString *datafilePath = [NSString stringWithFormat:@"%@/%@.txt",filePath,fileName];
+    NSData * data = [NSData dataWithContentsOfFile:datafilePath options:NSUTF8StringEncoding error:&error];
     if (error != nil){
         NSLog(@"读取数据错误信息%@", [error localizedDescription]);//将错误信息输出来
         return nil;
@@ -57,11 +58,12 @@
     
 }
 #pragma mark - 删除沙盒指定文件加数据
-+ (BOOL)deleteDataAtSandbox{
++ (BOOL)deleteDataAtSandboxWithFilenName:(NSString *)fileName{
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSString *pathDocument = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filePath = [NSString stringWithFormat:@"%@/Sandbox",pathDocument];
-    BOOL deleteStatus = [fileManager removeItemAtPath:filePath error:nil];
+    NSString *datafilePath = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt",fileName]];
+    BOOL deleteStatus = [fileManager removeItemAtPath:datafilePath error:nil];
     return deleteStatus;
     
     

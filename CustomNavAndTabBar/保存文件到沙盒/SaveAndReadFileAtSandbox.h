@@ -10,10 +10,10 @@
 
 @interface SaveAndReadFileAtSandbox : NSObject
 /**保存二进制数据到本地*/
-+ (void)saveDataToSandbox:(NSData *)data;
++ (void)saveDataToSandbox:(NSData *)data WithFilenName:(NSString *)fileName;
 /**读取二进制数据*/
-+ (NSData *)readDataFromSandbox;
++ (NSData *)readDataFromSandboxWithFilenName:(NSString *)fileName;
 /**删除本地二进制数据*/
-+ (BOOL)deleteDataAtSandbox;
++ (BOOL)deleteDataAtSandboxWithFilenName:(NSString *)fileName;
 @end
 
