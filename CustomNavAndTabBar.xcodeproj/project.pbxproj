@@ -178,6 +178,7 @@
 		A024763120A446A300AFCC36 /* UITextField+YTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A024762B20A446A300AFCC36 /* UITextField+YTExtension.m */; };
 		A024763220A446A300AFCC36 /* UIView+YTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A024762D20A446A300AFCC36 /* UIView+YTExtension.m */; };
 		A024763320A446A300AFCC36 /* UIColor+HexRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = A024762E20A446A300AFCC36 /* UIColor+HexRGB.m */; };
+		A0876F96224DB83A00525C62 /* YTSystemShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A0876F95224DB83A00525C62 /* YTSystemShareTool.m */; };
 		A093064F20AD521D00820F51 /* YT_Device.m in Sources */ = {isa = PBXBuildFile; fileRef = A093064D20AD521D00820F51 /* YT_Device.m */; };
 /* End PBXBuildFile section */
 
@@ -475,6 +476,8 @@
 		A024762C20A446A300AFCC36 /* UIButton+YTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YTExtension.h"; sourceTree = "<group>"; };
 		A024762D20A446A300AFCC36 /* UIView+YTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YTExtension.m"; sourceTree = "<group>"; };
 		A024762E20A446A300AFCC36 /* UIColor+HexRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexRGB.m"; sourceTree = "<group>"; };
+		A0876F94224DB83A00525C62 /* YTSystemShareTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSystemShareTool.h; sourceTree = "<group>"; };
+		A0876F95224DB83A00525C62 /* YTSystemShareTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSystemShareTool.m; sourceTree = "<group>"; };
 		A093064D20AD521D00820F51 /* YT_Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_Device.m; sourceTree = "<group>"; };
 		A093064E20AD521D00820F51 /* YT_Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_Device.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -629,6 +632,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A0876F93224DB83A00525C62 /* 系统分享 */,
 				17AB204921183AD00003E47B /* 下拉菜单栏(方向自适应) */,
 				179BCD7D20B00A9D0031742D /* 字体库 */,
 				179BCD7920B001380031742D /* GCD定时器 */,
@@ -1253,6 +1257,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		A0876F93224DB83A00525C62 /* 系统分享 */ = {
+			isa = PBXGroup;
+			children = (
+				A0876F94224DB83A00525C62 /* YTSystemShareTool.h */,
+				A0876F95224DB83A00525C62 /* YTSystemShareTool.m */,
+			);
+			path = "系统分享";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1516,6 +1529,7 @@
 				17C1182F202C1D7400C4629B /* MJRefreshAutoGifFooter.m in Sources */,
 				A02470D620A1D97500AFCC36 /* AFSecurityPolicy.m in Sources */,
 				A02470D120A1D97500AFCC36 /* AFURLResponseSerialization.m in Sources */,
+				A0876F96224DB83A00525C62 /* YTSystemShareTool.m in Sources */,
 				A024763020A446A300AFCC36 /* NSString+YTExtension.m in Sources */,
 				A00BFF8820EB0FE80089233D /* SGPageContentCollectionView.m in Sources */,
 				17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */,
