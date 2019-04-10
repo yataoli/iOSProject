@@ -65,3 +65,7 @@ NSData * aesEncryptData(NSData *contentData, NSData *keyData) {
 NSData * aesDecryptData(NSData *contentData, NSData *keyData) {
     return cipherOperation(contentData, keyData, kCCDecrypt);
 }
+//+ (NSData *)aesEncryptData:(NSData *)data andKey:(NSString *)key{
+//    NSData *keyData = [key ]
+//}
+//+ (NSData *)aesDecryptData:(NSData *)data andKey:(NSString *)key;
