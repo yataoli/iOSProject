@@ -9,6 +9,7 @@
 #import "CustomColletionView.h"
 #import "SingleCollectionViewCell.h"
 #import "DoubleCollectionViewCell.h"
+#import "HomeModel.h"
 #define ScreenBounds [UIScreen mainScreen].bounds
 #define ScreenWidth ScreenBounds.size.width
 #define ScreenHeight ScreenBounds.size.height
@@ -34,14 +35,21 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 7;
+    return self.dataArray.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    HomeModel *model = self.dataArray[indexPath.row];
     if (self.showType == singleLineShowOneGoods) {
         SingleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SingleCollectionViewCell" forIndexPath:indexPath];
+        HomeSmallModel *smallModel = model.dataArray[0];
+        [cell.goodsImgeView sd_setImageWithURL:[NSURL URLWithString:smallModel.filename ] placeholderImage:nil options:SDWebImageAllowInvalidSSLCertificates];
+        cell.goodsNameLabel.text = model.title;
         return cell;
     }else{
         DoubleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DoubleCollectionViewCell" forIndexPath:indexPath];
+        cell.goodsNameLabel.text = model.title;
+        HomeSmallModel *smallModel = model.dataArray[0];
+        [cell.goodsImgeView sd_setImageWithURL:[NSURL URLWithString:smallModel.filename ] placeholderImage:nil options:SDWebImageAllowInvalidSSLCertificates];
         return cell;
     }
 }

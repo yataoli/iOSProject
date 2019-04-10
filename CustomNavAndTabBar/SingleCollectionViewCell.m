@@ -12,7 +12,7 @@
 
 @interface SingleCollectionViewCell ()
 @property (nonatomic,strong) UIView *bgView;
-@property (nonatomic,strong) UILabel *goodsNameLabel;
+
 @property (nonatomic,strong) UILabel *goodsPriceLabel;
 @property (nonatomic,strong) UIView *bottomView;
 @end

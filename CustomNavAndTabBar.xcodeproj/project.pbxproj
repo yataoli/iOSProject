@@ -180,6 +180,7 @@
 		A024763320A446A300AFCC36 /* UIColor+HexRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = A024762E20A446A300AFCC36 /* UIColor+HexRGB.m */; };
 		A0876F96224DB83A00525C62 /* YTSystemShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A0876F95224DB83A00525C62 /* YTSystemShareTool.m */; };
 		A093064F20AD521D00820F51 /* YT_Device.m in Sources */ = {isa = PBXBuildFile; fileRef = A093064D20AD521D00820F51 /* YT_Device.m */; };
+		A0E1B6B5225DD4C000238321 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E1B6B4225DD4C000238321 /* HomeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -480,6 +481,8 @@
 		A0876F95224DB83A00525C62 /* YTSystemShareTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSystemShareTool.m; sourceTree = "<group>"; };
 		A093064D20AD521D00820F51 /* YT_Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_Device.m; sourceTree = "<group>"; };
 		A093064E20AD521D00820F51 /* YT_Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_Device.h; sourceTree = "<group>"; };
+		A0E1B6B3225DD4C000238321 /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		A0E1B6B4225DD4C000238321 /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -917,6 +920,8 @@
 		8A1FB5091F4A6DFF00DDC445 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A0E1B6B3225DD4C000238321 /* HomeModel.h */,
+				A0E1B6B4225DD4C000238321 /* HomeModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1568,6 +1573,7 @@
 				A00B00C820EDBED20089233D /* YT_CustomTabBarView.m in Sources */,
 				17C11834202C1D7400C4629B /* MJRefreshBackStateFooter.m in Sources */,
 				1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */,
+				A0E1B6B5225DD4C000238321 /* HomeModel.m in Sources */,
 				A024763320A446A300AFCC36 /* UIColor+HexRGB.m in Sources */,
 				17ED62CE207F4C750051B25F /* Reachability.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,

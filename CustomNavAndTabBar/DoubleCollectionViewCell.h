@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DoubleCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic, strong) UIImageView *goodsImgeView;
+@property (nonatomic, strong) UILabel *goodsNameLabel;
 @end

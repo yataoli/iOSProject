@@ -10,4 +10,5 @@
 
 @interface SingleCollectionViewCell : UICollectionViewCell
 @property (nonatomic,strong) UIImageView *goodsImgeView;
+@property (nonatomic,strong) UILabel *goodsNameLabel;
 @end
